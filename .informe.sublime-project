@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"TEXroot": "main.tex"
+	},
+	"build_systems":
+	[
+		{
+			"cmd": ["latexmk"]
+		}
+	]
+}

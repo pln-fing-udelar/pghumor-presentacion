@@ -1,0 +1,697 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"ins_abb"
+			],
+			[
+				"x",
+				"xml	XML Processing Instruction"
+			],
+			[
+				"Imprimi",
+				"ImprimirAsignaturasResumen"
+			],
+			[
+				"Wri",
+				"WriteLn"
+			],
+			[
+				"tiemp",
+				"tiempoEntrada"
+			],
+			[
+				"camino",
+				"camino_simple"
+			],
+			[
+				"cu",
+				"cumple"
+			],
+			[
+				"cumpl",
+				"cumple_v"
+			],
+			[
+				"cump",
+				"cumple"
+			],
+			[
+				"cum",
+				"cumple"
+			],
+			[
+				"re",
+				"rellenarCon9"
+			],
+			[
+				"Pi",
+				"PiezasPuestas"
+			],
+			[
+				"Piez",
+				"PiezaRotada"
+			],
+			[
+				"perm",
+				"permutacion_circular"
+			],
+			[
+				"Sin",
+				"SinColocar"
+			],
+			[
+				"con",
+				"conj_iguales"
+			],
+			[
+				"sin",
+				"sin_asignar"
+			],
+			[
+				"s",
+				"sin_conflicto"
+			],
+			[
+				"MC",
+				"MCCompleto"
+			],
+			[
+				"C",
+				"ColoresVecinosSinVecino"
+			],
+			[
+				"Col",
+				"ColoresVecinos"
+			],
+			[
+				"che",
+				"chequear_colores_region"
+			],
+			[
+				"chq",
+				"chequear_colores"
+			],
+			[
+				"cheque",
+				"chequear_colores"
+			],
+			[
+				"Colo",
+				"ColoresVecinos"
+			],
+			[
+				"Psin",
+				"PsinhImI"
+			],
+			[
+				"E2",
+				"E2sinXY"
+			],
+			[
+				"E1",
+				"E1sinXY"
+			],
+			[
+				"inte",
+				"intercambiar3"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 32.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"latextoo",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sspro",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"pro",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ssjso",
+				"Set Syntax: JSON"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"aapeo",
+				"z:AAAPackageDev: New PList Syntax Definition"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"preview",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"sspl",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"sslate",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sstex",
+				"Set Syntax: TeX"
+			],
+			[
+				"gitdiff",
+				"Git: Diff Current File"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"linter",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"sspr",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"ssprol",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"prolog",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"snip se",
+				"Snippet: section"
+			],
+			[
+				"snippet: tit",
+				"Snippet: titlepage"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 296.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/conclusion.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/body.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/herramientas.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/humor.tex",
+		"/home/santiago/Dropbox/Fing/Docente/Servicios.txt",
+		"/home/santiago/Dropbox/Fing/Link recursos.txt",
+		"/home/santiago/Dropbox/Fing/Llamado Grado 1/Resultado.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/features.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/.informe.sublime-project",
+		"/home/santiago/clasificachistes/config.php",
+		"/home/santiago/dump.sql",
+		"/var/tmp/kdecache-santiago/krun/18124_0_dump.sql",
+		"/var/tmp/kdecache-santiago/krun/18115_0_Base.sql",
+		"/home/santiago/Dropbox/Aplicaciones que instalo en mi PC.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/.body.tex.swp",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/features",
+		"/home/santiago/Dropbox/Servidor/Info",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Corpus/Scrapies/eshumor/eshumor/items.py",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/features_generales",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/main.bib",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/main.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/biblio.tex",
+		"/var/tmp/kdecache-santiago/krun/3741_0_httpd.conf",
+		"/var/tmp/kdecache-santiago/krun/3683_0_httpd.conf",
+		"/var/tmp/kdecache-santiago/krun/3695_0_httpd.conf",
+		"/var/tmp/kdecache-santiago/krun/1309_0_httpd.conf",
+		"/var/tmp/kdecache-santiago/krun/3671_0_httpd.conf",
+		"/var/tmp/kdecache-santiago/krun/3652_0_entrega1_2014.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2.tex",
+		"/var/tmp/kdecache-santiago/krun/31611_0_CasosEspeciales.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2_herramientas.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2_conclusion.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2_humor.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/10/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2_1.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/.informe.sublime-project",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/informe.sublime-project",
+		"/home/santiago/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/santiago/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/santiago/Dropbox/Sublime/Packages/User/LaTeXTools.sublime-settings",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/main.tex",
+		"/home/santiago/Dropbox/Sublime/Packages/User/Package Control.last-run",
+		"/home/santiago/Dropbox/Sublime/Packages/User/Package Control.sublime-settings",
+		"/home/santiago/Dropbox/Sublime/Packages/User/Preferences.sublime-settings",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/output/main.fdb_latexmk",
+		"/home/santiago/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
+		"/home/santiago/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/biblio.tex",
+		"/home/santiago/Descargas/Jokes_and_Their_Relation_to_the_Unconsci.bibtex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/chap2.bib",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/notas.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/apuntes.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/output/biblio.aux",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/copia_vieja/biblio.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/copia_vieja/biblio.aux",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/copia_vieja/chap2.bib",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/.latexmkrc",
+		"/home/santiago/Descargas/Semantic_Mechanisms_of_Humor.bibtex",
+		"/home/santiago/Descargas/f.txt",
+		"/home/santiago/malva/ProblemInstances/instancias/ejemplo.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Algoritmos Evolutivos/Proyecto/Compartido/src/distancias.rb",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Algoritmos Evolutivos/Proyecto/Compartido/src/wms_tabbed.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/copia_vieja/chap2_antiguo.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/copia_vieja/title.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Corpus/corpus.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/output/main.blg",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/activeLearning_hedgeCues.pdf",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2_1.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2.bib",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/main.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Estado del arte/Informe/notas copia.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/ls.out",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/main.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/output/main.toc",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/main.bbl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/Makefile",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/output/main.fls",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/biblio.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/biblio.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/main.bib",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/aux/main.aux",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/title.tex",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/output/main.log",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/compilar.sh",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2_1.fdb_latexmk",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2.blg",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2.bbl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/chap2_1.log",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/main.bbl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/corpus",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Corpus/Fuentes-Scrapy.txt",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Informe/estado_del_arte/apuntes",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/badaraco/settings.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/gussi/gussi/spiders/gussi_spider.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/hernandez/hernandez/spiders/hernandez_spider.py",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Proyecto de Grado/Compartido/Etapas/Corpus/eshumor/eshumor/items.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/hernandez/hernandez/items.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/boutique/boutique/spiders/boutique_spider.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/cuspide/cuspide/spiders/cuspide_spider.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/badaraco/spiders/badaraco_spider.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/badaraco/pipelines.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/badaraco/items.py",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/scrapy.cfg",
+		"/home/santiago/Dropbox/Tucarrito/Scrapy/badaraco/setup.py",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Combinatoria Analítica/Práctico/II.13/informe.tex",
+		"/home/santiago/Dropbox/BackTrack/MACs fing/macs.txt",
+		"/home/santiago/Dropbox/Básico UNIX.url",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Laboratorio/2/estado.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Laboratorio/2/foxlog.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Laboratorio/2/minimax.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Laboratorio/2/movimientos.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Laboratorio/1/grupo01.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Práctico/P1E1.pl",
+		"/home/santiago/Dropbox/Fing/Semestres/9/asignaturas/Programación Lógica/Práctico/P7E4.pl",
+		"/home/santiago/Descargas/P2E13.mod",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/src/Banco.mod",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea2_2/src/Banco.mod",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea2_2/def/Cuenta.def",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_12.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_11.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_10.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_09.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_08.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_07.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_06.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_05.in",
+		"/home/santiago/Dropbox/Fing/Docente/P2/repo/tarea4/test/Test4_04.in"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"SD",
+			"wedge",
+			"alit",
+			"[A-Z]{2,}",
+			"antonimia",
+			"Antonimia",
+			"antonimia",
+			"conf/",
+			"chap2",
+			"directory",
+			"/var/www",
+			"virtualhost",
+			"antoní",
+			"es necesario",
+			"so63066",
+			"project",
+			"Complete",
+			"AUX_DIR",
+			"OUTPUT_DIR",
+			"humano",
+			"un salto",
+			".fox",
+			"_",
+			".pl",
+			"y",
+			":",
+			"Minimax",
+			"minimax",
+			"_",
+			"(",
+			",",
+			"paragr",
+			"\\subsubsection",
+			"\\subsection",
+			"\\section",
+			"\\\\p",
+			"\\\\s",
+			"\\\\",
+			"\\subparagraph",
+			"\\paragraph",
+			"\\subsubsection",
+			"\\subsection",
+			"\\section",
+			"arbol",
+			"abb",
+			"minipage",
+			"noop",
+			"estado_del_arte/",
+			"image",
+			"imagenes",
+			"Imagenes",
+			"Naiv",
+			"bib",
+			"howpu",
+			"GAJ",
+			"@MISC{misc-minimal,",
+			"@MISC{misc-minimal,\n",
+			"~",
+			"misc",
+			"sens",
+			"luego",
+			"luego luego",
+			"o o",
+			"o or",
+			"\\ref",
+			"caracteristicas_eliminadas",
+			"\\ref{",
+			"\\label{",
+			"\\label",
+			"footnote",
+			"cite",
+			"\\cite",
+			"sin sentido",
+			"ignor",
+			"percibidor",
+			"introduc",
+			"item",
+			"&",
+			"bin",
+			"comb",
+			"r=\"24\"",
+			"fill=\"#000\" stroke=\"#000\" stroke-width=\"1\" ",
+			"1.5",
+			"stroke-opacity=\"null\" ",
+			"23.5",
+			"stroke-opacity=\"null\" ",
+			"id=",
+			"id",
+			"rx=\"23.5\"",
+			"ellipse",
+			"000000",
+			"concatenacion",
+			"member",
+			"findall",
+			"list_type",
+			"var",
+			"/usr",
+			"linux",
+			"grafo_no_conexo",
+			"grafo_conexo",
+			"g",
+			"maketitle",
+			"title",
+			"\"",
+			"maketitle",
+			"&",
+			"{",
+			"1",
+			"&",
+			"generacion",
+			"Piezas",
+			"arg",
+			"pieza(",
+			"generar",
+			"Vs",
+			"genera",
+			"R",
+			"Ps",
+			" E",
+			"e",
+			"E",
+			"ida",
+			"chequear_celos",
+			"intercambiar2",
+			"phi",
+			"_",
+			"mathcal",
+			"phi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\subsection",
+			"\\section",
+			"\\chapter",
+			"\\paragraph",
+			"\\subsubsection",
+			"\\subsection",
+			"\\section",
+			"\\chapter",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 167.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": ".informe.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				".bib",
+				"chap2.bib"
+			],
+			[
+				"bib",
+				"chap2.bib"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
