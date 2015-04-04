@@ -36,3 +36,130 @@
         \item Algoritmo de selección
     \end{itemize}
 \end{frame}
+
+\subsubsection{Resultado de la anotación}
+\begin{frame}[allowframebreaks]
+    \frametitle{Resultado de la anotación}
+
+    \begin{itemize}
+        \item[+] 60k votaciones recibidas
+        \item[--] 20k votaciones eliminadas
+        \item[--] 6,5k votaciones “ver otro” (\emph{“skip”})
+        \item[=] 33,5k votos considerados
+    \end{itemize}
+
+    \framebreak
+
+    \begin{center}
+        \begin{tabular}{ c | r }
+            Calificación & \#votos \\
+            \hline
+            1 estrella & 3.665 \\
+            2 estrellas & 3.031 \\
+            3 estrellas & 4.087 \\
+            4 estrellas & 3.132 \\
+            5 estrellas & 2.054 \\
+            No es humor & 17.562 \\
+        \end{tabular}
+
+        \includegraphics{votos_por_calificacion_torta.png}
+
+        \includegraphics{votos_por_categoria_torta.png}
+
+        \includegraphics{histograma.png}
+    \end{center}
+\end{frame}
+
+\subsubsection{Humor según la votación}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Humor según la votación}
+
+    \begin{itemize}
+        \item $>= 60\%$ de votos de humor $\Rightarrow$ \textbf{Humor}
+        \item $(30\%, 60\%)$ de votos de humor $\Rightarrow$ \textbf{Dudoso}
+        \item $<= 30\%$ de votos de humor $\Rightarrow$ \textbf{No humor}
+    \end{itemize}
+
+    \begin{center}
+        \includegraphics{histograma_porcentaje_humor.png}
+
+        \includegraphics{grupos.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mejores chistes}
+
+    \begin{block}{}
+        --- ¿Fumaste marihuana?
+
+        --- ¡No, papá! Te juro que...
+
+        --- Idiota, ¡soy tu perro!
+
+        --- ¡Jajajá Firulay me asustaste! :(
+    \end{block}{}
+
+    \begin{block}{}
+        --- Ayer al salir del trabajo atropellé a un unicornio.
+
+        --- No jodas, ¿tenés trabajo?
+    \end{block}{}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ejemplos de dudosos}
+
+    \begin{block}{}
+        Típico: esa alegría de saber que a tu amigo también le fue mal en la prueba.
+    \end{block}{}
+
+    \begin{block}{}
+        Dejar para mañana lo que ayer dejé para hoy.
+    \end{block}{}
+
+    \begin{block}{}
+        2 palabras, 9 letras, 1 mentira universal: estoy bien.
+    \end{block}{}
+\end{frame}
+
+\subsubsection{Concordancia entre los anotadores}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Concordancia entre los anotadores}
+
+    \begin{itemize}
+        \item Se quiere saber qué tan de acuerdo estuvieron las personas a la hora de votar.
+        \item Se utiliza la medida kappa de Fleiss.
+        \item kappa evalúa cuán mejor es la votación respecto a una al azar, siendo lo mejor posible 1 y siendo 0 una votación al azar.
+    \end{itemize}
+
+    \framebreak
+
+    \begin{center}
+        \begin{tabular}{ c | r | c }
+            tweets considerados & \#tweets & $\kappa$ \\
+            \hline
+            $\geq$2 votos & 8.320 & 0,6122 \\
+            $\geq$3 votos & 4.309 & 0,5226 \\
+            $\geq$4 votos & 2.273 & 0,4691 \\
+            $\geq$5 votos & 1.331 & 0,4341 \\
+            $\geq$6 votos & 805 & 0,4056 \\
+            $\geq$7 votos & 527 & 0,3883 \\
+            $\geq$8 votos & 354 & 0,3810 \\
+            $\geq$9 votos & 244 & 0,3586 \\
+            $\geq$10 votos & 164 & 0,3225 \\
+            $\geq$11 votos & 105 & 0,3086 \\
+            $\geq$12 votos & 64 & 0,2931 \\
+        \end{tabular}
+
+        \includegraphics{kappa.png}
+    \end{center}
+
+    \framebreak
+
+    \begin{itemize}
+        \item \large{Acuerdo de nivel \textbf{medio-alto}}
+    \end{itemize}
+\end{frame}
