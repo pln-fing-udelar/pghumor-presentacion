@@ -73,6 +73,10 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{multicol}
 
+\usepackage[export]{adjustbox} % Para bordes en las imágenes.
+
+\graphicspath{{imagenes/}}
+
 \AtBeginSubsection[]
 {
     \begin{frame}
@@ -93,17 +97,13 @@
     \end{frame}
 }
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
 \title[Detección de humor]{Detección de humor en textos en español}
 
-\author{Santiago \textsc{Castro} - Matías \textsc{Cubero}}
+\author{Santiago \textsc{Castro} --- Matías \textsc{Cubero}}
 \institute[]{
-    Facultad de Ingeniería - Universidad de la República \\
+    Facultad de Ingeniería, Universidad de la República \\
     \medskip
-    \textit{sacastro@fing.edu.uy - mcubero@fing.edu.uy}
+    \textit{sacastro@fing.edu.uy --- mcubero@fing.edu.uy}
 }
 \date{\today}
 
@@ -119,10 +119,6 @@
         \tableofcontents
     \end{multicols}
 \end{frame}
-
-%----------------------------------------------------------------------------------------
-%	PRESENTATION SLIDES
-%----------------------------------------------------------------------------------------
 
 \input{partes/intro}
 \input{partes/estado_del_arte}
