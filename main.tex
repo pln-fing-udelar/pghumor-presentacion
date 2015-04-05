@@ -1,12 +1,13 @@
-\documentclass{beamer}
+\PassOptionsToPackage{spanish}{translator}
+\documentclass{beamer} %handout, notes=show
 
 \usepackage[spanish, es-tabla]{babel}
 
-\uselanguage{spanish}
-\languagepath{spanish}
+%\uselanguage{spanish}
+%\languagepath{spanish}
 
-\deftranslation[to=spanish]{Example}{Ejemplo}
-\deftranslation[to=spanish]{example}{ejemplo}
+%\deftranslation[to=spanish]{Example}{Ejemplo}
+%\deftranslation[to=spanish]{example}{ejemplo}
 
 \mode<presentation> {
 
@@ -83,14 +84,14 @@
 
 \DeclareMathOperator*{\argmax}{arg\,max}
 
-\AtBeginSubsection{
-    \begin{frame}
-        \frametitle{Índice de contenido}
-        \begin{multicols}{2}
-            \tableofcontents[currentsubsection]
-        \end{multicols}
-    \end{frame}
-}
+% \AtBeginSubsection{
+%     \begin{frame}
+%         \frametitle{Índice de contenido}
+%         \begin{multicols}{2}
+%             \tableofcontents[currentsubsection]
+%         \end{multicols}
+%     \end{frame}
+% }
 
 \AtBeginSection{
     \begin{frame}
