@@ -253,6 +253,7 @@
 
         \begin{center}
             \scriptsize
+
             \begin{tabular}{ c | r | r | r | r | r | r | r }
                 \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
                 \hline
@@ -288,7 +289,33 @@
 \begin{frame}
     \frametitle{Clasificador final}
 
-    Clasificador final
+    \begin{center}
+        \scriptsize
+
+        \begin{tabular}{ c | r | r | r | r | r | r | r }
+            \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
+            \hline
+            \textbf{SVM} & \textbf{83,61} & 68,85 & \textbf{75,52} & 93,84 & 97,24 & \textbf{95,51} & \textbf{92,45} \\
+            \hline
+            \textbf{DT} & 66,51 & 67,54 & 67,02 & 93,33 & 93,03 & 93,18 & 88,85 \\
+            \hline
+            \textbf{GNB} & 57,49 & \textbf{78,17} & 66,25 & \textbf{95,17} & 88,16 & 91,53 & 86,46 \\
+            \hline
+            \textbf{MNB} & 84,76 & 60,02 & 70,27 & 92,27 & \textbf{97,79} & 94,95 & 91,37 \\
+            \hline
+            \textbf{kNN} & 81,26 & 66,31 & 73,03 & 93,35 & 96,87 & 95,08 & 91,67 \\
+        \end{tabular}
+
+        \vfill
+
+        \begin{tabular}{ c | r | r }
+            \textbf{son/clasificados} & Humor & No humor \\
+            \hline
+            Humor & 842 & 381 \\
+            \hline
+            No humor & 165 & 5805 \\
+        \end{tabular}
+    \end{center}
 \end{frame}
 
 \subsection{Otros análisis}
