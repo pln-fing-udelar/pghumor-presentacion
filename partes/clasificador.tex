@@ -137,7 +137,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Palabras frecuentes}
+    \frametitle{Palabras clave}
 
     \begin{itemize}
         \item Lista de palabras frecuentes en tweets
@@ -319,8 +319,157 @@
 \end{frame}
 
 \subsection{Otros análisis}
-\begin{frame}
-    \frametitle{Otros análisis}
 
-    Otros análisis
+\subsubsection{Evaluación en el conjunto de entrenamiento}
+\begin{frame}
+    \frametitle{Evaluación en el conjunto de entrenamiento}
+
+    \begin{itemize}
+        \item Es un caso que tendría que andar bien, para ser consistentes
+        \item Es una ``cota superior''
+    \end{itemize}
+
+    \begin{center}
+        \scriptsize
+        \begin{tabular}{ c | r | r | r | r | r | r | r }
+            \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
+            \hline
+            \textbf{SVM} & 87,46 & 69,61 & 77,52 & 94,16 & 98,01 & 96,05 & 93,28\\
+            \hline
+            \textbf{DT} & \textbf{99,96} & \textbf{98,82} & \textbf{99,38} & \textbf{99,76} & \textbf{99,99} & \textbf{99,88} & \textbf{99,80} \\
+            \hline
+            \textbf{GNB} & 58,06 & 77,65 & 66,44 & 95,21 & 88,79 & 91,89 & 86,94 \\
+            \hline
+            \textbf{MNB} & 84,56 & 58,93 & 69,46 & 92,26 & 97,85 & 94,97 & 91,67 \\
+            \hline
+            \textbf{kNN} & 86,98 & 71,47 & 78,47 & 94,49 & 97,86 & 96,15 & 93,47 \\
+        \end{tabular}
+    \end{center}
+
+    \begin{itemize}[<+->]
+        \item Los resultados son consistentes
+        \item ¿Por qué DT no da 100\%? Debería darlo.
+        \item Las características no discriminan completamente a la clase.
+        \item ¿Hay errores en el corpus?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Evaluación en el conjunto de entrenamiento II}
+
+    \begin{itemize}[<+->]
+        \item Los resultados son consistentes
+        \item ¿Por qué DT no da 100\%? Debería darlo.
+        \item Las características no discriminan completamente a la clase.
+        \item ¿Hay errores en el corpus?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Evaluación en el conjunto de entrenamiento III}
+
+    \begin{itemize}
+        \item Siguiendo la distancia mínima de edición en tweets (la granularidad es una palabra): se encontraron 367 pares de tweets ``parecidos'' pero con distinto valor de la clase objetivo.
+    \end{itemize}
+
+    \begin{example}
+        Limpiar tu cuarto = 1\% limpieza. 30\% quejarse. 69\% jugar con lo que vas encontrando.
+    \end{example}
+
+    \begin{example}
+        Limpiar tu cuarto:
+
+        1\% limpieza.
+
+        30\% quejarse.
+
+        69\% jugar con lo que vas encontrando.
+    \end{example}
+\end{frame}
+\note{
+    En este caso son casi las mismas palabras, pero distinto espaciado y puntuación.
+}
+
+\begin{frame}
+    \frametitle{Evaluación en el conjunto de entrenamiento IV}
+
+    \begin{itemize}
+        \item Luego se buscan aquellos con mismos valores de atributos pero distinta clase: 30 pares encontrados.
+    \end{itemize}
+
+    \begin{example}
+        #TerminarUnaNotaDeSuicidioCon Soy Darks.
+    \end{example}
+
+    \begin{example}
+        #SiYoMeLlamaraKevinRoldan Me suicidaria.
+    \end{example}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Evaluación en el conjunto de entrenamiento V}
+
+    \begin{itemize}[<+->]
+        \item Hay inconsistencias en la anotación (era esperado)
+        \item Hay una mejora sobre el corpus de entrenamiento quitando estas instancias:
+
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 94,72 & 98,31 & 96,48 \\
+                \hline
+                Humor & 88,96 & 71,27 & 79,13 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
+
+    \begin{itemize}[<3>]
+        \item Y en el de corpus de evaluación:
+
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 94,20 & 97,75 & 95,94 \\
+                \hline
+                Humor & 85,71 & 69,21 & 76,58 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
+\end{frame}
+
+\subsubsection{Restricción al subcorpus de cuentas de humor}
+\begin{frame}
+    \frametitle{Restricción al subcorpus de cuentas de humor}
+
+    
+\end{frame}
+
+\subsubsection{Tweets censurados}
+\begin{frame}
+    \frametitle{Tweets censurados}
+
+    
+\end{frame}
+
+\subsubsection{Clasificación según categorías de cuentas no humorísticas}
+\begin{frame}
+    \frametitle{Clasificación según categorías de cuentas no humorísticas}
+
+    
+\end{frame}
+
+\subsubsection{Tweets dusosos}
+\begin{frame}
+    \frametitle{Tweets dusosos}
+
+    
+\end{frame}
+
+\subsubsection{Independencia y combinación de características}
+\begin{frame}
+    \frametitle{Independencia y combinación de características}
+
+    
 \end{frame}
