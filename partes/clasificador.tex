@@ -505,7 +505,21 @@
 \begin{frame}
     \frametitle{Tweets censurados}
 
-    
+    \begin{itemize}[<+->]
+        \item El clasificador está sesgado a no conocer los tweets con contenido explícito
+        \item Se anotan a mano los 303 tweets censurados y se agregan
+        \item Hay una pequeña mejora:
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 93,74 & 97,17 & 95,43 \\
+                \hline
+                Humor & 84,01 & 69,59 & 76,13 \\
+            \end{tabular}
+        \end{center}
+        \item Un nuevo estudio de importancia de las características revela que no varía Jerga sexual: se agrega más variedad que jerga sexual.
+    \end{itemize}
 \end{frame}
 
 \subsubsection{Clasificación según categorías de cuentas no humorísticas}
