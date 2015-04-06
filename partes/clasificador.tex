@@ -45,9 +45,38 @@
 \begin{frame}
     \frametitle{Línea base}
 
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
         \item BoW + MNB
+
+        \begin{itemize}
+            \item Acierto 83,51\%
+
+            \begin{center}
+                \begin{tabular}{ c | r | r | r }
+                    \textbf{BOW} & precisión & recall & $F_1$ \\
+                    \hline
+                    No humor & 97,72 & 86,06 & 88,80 \\
+                    \hline
+                    Humor & 63,12 & 75,42 & 68,73 \\
+                \end{tabular}
+            \end{center}
+        \end{itemize}
+
         \item Clasificador que predice según lo que dice la mayoría (No humor)
+
+        \begin{itemize}
+            \item Acierto 83\%
+
+            \begin{center}
+                \begin{tabular}{ c | r | r | r }
+                    \textbf{No humor} & precisión & recall & $F_1$ \\
+                    \hline
+                    No humor & 100,00 & 83,00 & 90,71 \\
+                    \hline
+                    Humor & NaN & 0,00 & NaN \\
+                \end{tabular}
+            \end{center}
+        \end{itemize}
     \end{enumerate}
 \end{frame}
 
