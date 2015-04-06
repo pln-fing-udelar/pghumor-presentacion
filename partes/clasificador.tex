@@ -455,27 +455,50 @@
 \begin{frame}
     \frametitle{Restricción al subcorpus de cuentas de humor}
 
-    \begin{itemize}
+    \begin{itemize}[<+->]
         \item Es una tarea más difícil
         \item Igualmente se logran buenos resultados:
-    \end{itemize}
 
-    \begin{center}
-        \scriptsize
-        \begin{tabular}{ c | r | r | r | r | r | r | r }
-            \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
-            \hline
-            \textbf{SVM} & \textbf{81,87} & 73,83 & 77,64 & 78,47 & \textbf{85,36} & \textbf{81,77} & \textbf{79,92} \\
-            \hline
-            \textbf{DT} & 74,49 & 75,48 & 74,98 & 72,20 & 71,14 & 71,66 & 74,12 \\
-            \hline
-            \textbf{GNB} & 78,72 & 78,55 & \textbf{78,64} & 76,10 & 76,29 & 76,19 & 77,48 \\
-            \hline
-            \textbf{MNB} & 68,52 & \textbf{85,45} & 76,06 & \textbf{83,27} & 64,86 & 72,9 & 74,58 \\
-            \hline
-            \textbf{kNN} & 79,24 & 73,02 & 76,00 & 77,43 & 82,87 & 80,06 & 78,14 \\
-        \end{tabular}
-    \end{center}
+        \begin{center}
+            \scriptsize
+            \begin{tabular}{ c | r | r | r | r | r | r | r }
+                \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
+                \hline
+                \textbf{SVM} & \textbf{81,87} & 73,83 & 77,64 & 78,47 & \textbf{85,36} & \textbf{81,77} & \textbf{79,92} \\
+                \hline
+                \textbf{DT} & 74,49 & 75,48 & 74,98 & 72,20 & 71,14 & 71,66 & 74,12 \\
+                \hline
+                \textbf{GNB} & 78,72 & 78,55 & \textbf{78,64} & 76,10 & 76,29 & 76,19 & 77,48 \\
+                \hline
+                \textbf{MNB} & 68,52 & \textbf{85,45} & 76,06 & \textbf{83,27} & 64,86 & 72,9 & 74,58 \\
+                \hline
+                \textbf{kNN} & 79,24 & 73,02 & 76,00 & 77,43 & 82,87 & 80,06 & 78,14 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Métricas ponderadas según calificación}
+
+    \begin{itemize}[<+->]
+        \item Tiene sentido sólo para los tweets que tuvieron votos y para la medida recall
+        \item Promedio de votación, $PV_t = \frac{\sum_{i = 0}^{5} i \times v_{ti}}{v_t}$
+        \item $recall_{ponderado} = \frac{\sum_{t \in VP} PV_t} {\sum_{t \in VP} PV_t + \sum_{t \in FN} PV_t} = 70.68\%$
+        \item $\frac{recall_{ponderado}}{recall} = \frac{prom_{VP}}{prom_H} = 1.0266$
+        \item Hay un (muy) leve sesgo del clasificador SVM a dar como positivos aquellos tweets que tienen mayor promedio de votación.
+        \item Matriz de confusión:
+
+        \begin{center}
+            \begin{tabular}{ c | r | r }
+                \textbf{son/clasificados} & Humor & No humor \\
+                \hline
+                Humor & 2,7227 & 2,4961 \\
+                \hline
+                No humor & 0,0256 & 0,0300 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
 \end{frame}
 
 \subsubsection{Tweets censurados}
