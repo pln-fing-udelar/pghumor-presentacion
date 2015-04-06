@@ -526,7 +526,43 @@
 \begin{frame}
     \frametitle{Clasificación según categorías de cuentas no humorísticas}
 
-    
+    \begin{itemize}[<+->]
+        \item Noticias:
+
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 96,95 & 98,12 & 97,53 \\
+                \hline
+                Humor & 97,00 & 95,18 & 96,08 \\
+            \end{tabular}
+        \end{center}
+
+        \item Reflexiones:
+        
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 83,95 & 95,27 & 89,25 \\
+                \hline
+                Humor & 94,95 & 82,99 & 88,57 \\
+            \end{tabular}
+        \end{center}
+
+        \item Curiosidades:
+
+        \begin{center}
+            \begin{tabular}{ c | r | r | r }
+                \textbf{SVM} & precisión & recall & $F_1$ \\
+                \hline
+                No humor & 88,24 & 96,26 & 92,08 \\
+                \hline
+                Humor & 94,64 & 83,73 & 88,85 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
 \end{frame}
 
 \subsubsection{Tweets dusosos}
