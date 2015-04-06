@@ -87,8 +87,9 @@
 \AtBeginSubsection{
     \begin{frame}
         \frametitle{Índice de contenido}
+
         \begin{multicols}{2}
-            \tableofcontents[currentsubsection]
+            \tableofcontents[currentsubsection, sectionstyle=show/show, subsectionstyle=show/shaded/hide]
         \end{multicols}
     \end{frame}
 }
@@ -96,8 +97,9 @@
 \AtBeginSection{
     \begin{frame}
         \frametitle{Índice de contenido}
+
         \begin{multicols}{2}
-            \tableofcontents[currentsection]
+            \tableofcontents[currentsection, hideallsubsections]
         \end{multicols}
     \end{frame}
 }
@@ -118,10 +120,11 @@
     \titlepage
 \end{frame}
 
-\begin{frame}[shrink]{Outline}
-    \frametitle{Índice de Contenido}
+\begin{frame}
+    \frametitle{Índice de contenido}
+
     \begin{multicols}{2}
-        \tableofcontents
+        \tableofcontents[hideallsubsections]
     \end{multicols}
 \end{frame}
 
