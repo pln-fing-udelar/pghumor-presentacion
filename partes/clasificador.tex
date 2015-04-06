@@ -578,5 +578,23 @@
 \begin{frame}
     \frametitle{Independencia y combinación de características}
 
-    
+    \begin{itemize}[<+->]
+        \item Naïve Bayes pide independencia de atributos, pero no se cumple
+        \item SVM, kNN y DT soportan que características actúen juntas
+        \item Ejemplo:
+
+        \begin{center}
+            \begin{tabular}{ c | c | c }
+                X & Y & XOR \\
+                \hline
+                0 & 0 & 0 \\
+                \hline
+                0 & 1 & 1 \\
+                \hline
+                1 & 0 & 1 \\
+                \hline
+                1 & 1 & 0 \\
+            \end{tabular}
+        \end{center}
+    \end{itemize}
 \end{frame}
