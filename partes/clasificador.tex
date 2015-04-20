@@ -350,17 +350,17 @@
     \begin{center}
         \scriptsize
         \begin{tabular}{ c | r | r | r | r | r | r | r }
-            \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
+            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
             \hline
-            \textbf{SVM} & 87,46 & 69,61 & 77,52 & 94,16 & 98,01 & 96,05 & 93,28\\
+            SVM & 87,46 & 69,61 & 77,52 & 94,16 & 98,01 & 96,05 & 93,28 \\
             \hline
-            \textbf{DT} & \textbf{99,96} & \textbf{98,82} & \textbf{99,38} & \textbf{99,76} & \textbf{99,99} & \textbf{99,88} & \textbf{99,80} \\
+            DT & \textbf{99,96} & \textbf{98,82} & \textbf{99,38} & \textbf{99,76} & \textbf{99,99} & \textbf{99,88} & \textbf{99,80} \\
             \hline
-            \textbf{GNB} & 58,06 & 77,65 & 66,44 & 95,21 & 88,79 & 91,89 & 86,94 \\
+            GNB & 58,06 & 77,65 & 66,44 & 95,21 & 88,79 & 91,89 & 86,94 \\
             \hline
-            \textbf{MNB} & 84,56 & 58,93 & 69,46 & 92,26 & 97,85 & 94,97 & 91,67 \\
+            MNB & 84,56 & 58,93 & 69,46 & 92,26 & 97,85 & 94,97 & 91,67 \\
             \hline
-            \textbf{kNN} & 86,98 & 71,47 & 78,47 & 94,49 & 97,86 & 96,15 & 93,47 \\
+            KNN & 86,98 & 71,47 & 78,47 & 94,49 & 97,86 & 96,15 & 93,47 \\
         \end{tabular}
     \end{center}
 \end{frame}
@@ -523,75 +523,25 @@
 \begin{frame}
     \frametitle{Clasificación según categorías de cuentas no humorísticas}
 
-    \begin{itemize}[<+->]
-        \item Noticias:
-
-        \begin{center}
-            \begin{tabular}{ c | r | r | r }
-                \textbf{SVM} & precisión & recall & $F_1$ \\
-                \hline
-                No humor & 96,95 & 98,12 & 97,53 \\
-                \hline
-                Humor & 97,00 & 95,18 & 96,08 \\
-            \end{tabular}
-        \end{center}
-
-        \item Reflexiones:
-        
-        \begin{center}
-            \begin{tabular}{ c | r | r | r }
-                \textbf{SVM} & precisión & recall & $F_1$ \\
-                \hline
-                No humor & 83,95 & 95,27 & 89,25 \\
-                \hline
-                Humor & 94,95 & 82,99 & 88,57 \\
-            \end{tabular}
-        \end{center}
-
-        \item Curiosidades:
-
-        \begin{center}
-            \begin{tabular}{ c | r | r | r }
-                \textbf{SVM} & precisión & recall & $F_1$ \\
-                \hline
-                No humor & 88,24 & 96,26 & 92,08 \\
-                \hline
-                Humor & 94,64 & 83,73 & 88,85 \\
-            \end{tabular}
-        \end{center}
-    \end{itemize}
+    \begin{center}
+        \scriptsize
+        \begin{tabular}{ c | r | r | r | r | r | r | r }
+            \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \hline
+            Noticias & \textbf{97,00} & \textbf{95,18} & \textbf{96,08} & \textbf{96,95} & \textbf{98,12} & \textbf{97,53} & \textbf{96,97} \\
+            \hline
+            Reflexiones & 94,95 & 82,99 & 88,57 & 83,95 & 95,27 & 89,25 & 88,92 \\
+            \hline
+            Curiosidades & 94,64 & 83,73 & 88,85 & 88,24 & 96,26 & 92,08 & 90,74 \\
+        \end{tabular}
+    \end{center}
 \end{frame}
 
 \subsubsection{Tweets dusosos}
-\begin{frame}
+\begin{frame}[allowframebreaks]
     \frametitle{Tweets dusosos}
 
-    \begin{itemize}
-        \item 21\% de los Dudosos son considerados humorísticos
-    \end{itemize}
-\end{frame}
-
-\subsubsection{Independencia y combinación de características}
-\begin{frame}
-    \frametitle{Independencia y combinación de características}
-
-    \begin{itemize}[<+->]
-        \item Naïve Bayes pide independencia de atributos, pero no se cumple
-        \item SVM, kNN y DT soportan que características actúen juntas
-        \item Ejemplo:
-
-        \begin{center}
-            \begin{tabular}{ c | c | c }
-                X & Y & XOR \\
-                \hline
-                0 & 0 & 0 \\
-                \hline
-                0 & 1 & 1 \\
-                \hline
-                1 & 0 & 1 \\
-                \hline
-                1 & 1 & 0 \\
-            \end{tabular}
-        \end{center}
-    \end{itemize}
+    \begin{center}
+        \includegraphics{dudosos.png}
+    \end{center}
 \end{frame}
