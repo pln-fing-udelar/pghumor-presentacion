@@ -109,14 +109,8 @@
     A partir de lo anterior, se definen 4 medidas. \textbf{Precisión} (ilustrada por la P en el dibujo) es el porcentaje de instancias correctamente etiquetadas como positivas. Es la relación entre la parte verde de la elipse y la elipse en sí (no le importan los negativos). Presta atención a los errores de tipo I (falsos positivos). El \textbf{Recall} (ilustrado por la R en el dibujo) mide la relación entre los correctamente encontrados respecto a todos los que positivos había. De esta manera presta atención a los errores de tipo II (falsos negativos). Tampoco le importa la correcta clasificación de los negativos. La medida \textbf{$F_1$} es muy similar a las anteriores, pero pondera de igual manera los dos tipos de errores. Se puede ver como una medida promedio. A su vez está el \textbf{Acierto}, que es el porcentaje de instancias correctamente clasificadas (de cualquier tipo, esta sí mira los negativos).
 }
 
-\subsection{Escalado de características}
-\begin{frame}
-    \frametitle{Escalado de características}
-
-    \begin{itemize}
-        \item Se \emph{normalizan} los valores de los atributos
-    \end{itemize}
-\end{frame}
 \note{
+    TODO: resumir esto y hablar en la parte de resultados.
+    
     En algunos tipos de clasificadores, como SVM y kNN, hay una función de distancia implícitamente definida, en la cual los distintos valores de cada característica imponen un peso en la misma. Por ejemplo, si se tiene una característica binaria que indica con 0 o 1 la presencia de cierta palabra en un tweet y otra característica que cuenta la cantidad de letras, la última toma valores muchos más grandes y una diferencia de dos letras en un tweet representarían una distancia mayor que dos tweets con distintos valores en la primera característica, aunque no necesariamente es cierto que una distancia sea mayor que la otra. A métodos que estandaricen los datos de esta manera se dice que hacen Escalado de características. Se puede resolver este problema realizando un Reescalado, dejando los valores de todas las características en el mismo rango, como [0, 1], por ejemplo. Pero adicionalmente, cuando se entrena con SVM con ciertos tipos de curvas, se asumen que los datos tienen la misma varianza y están centrados en cero. Entonces se preprocesan los valores de los atributos para que queden con promedio cero y desviación estándar uno. A esto se le conoce como Estandarización. Para el caso puntual de MNB no tiene sentido hacer escalado ya que supone que las características tienen distribución multinomial, es decir de un dominio discreto. A su vez el clasificador no permite valores negativos de características, por lo tanto un centrado tampoco aplica.
 }
