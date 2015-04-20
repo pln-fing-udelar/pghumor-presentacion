@@ -188,7 +188,7 @@
 
     \begin{center}
         \[
-            PalabrasFrecuentes(tweet) = \frac{|tweet \cap DIC_{PF}|}{\sqrt{|tweet|}}
+            PalabrasClave(tweet) = \frac{|tweet \cap DIC_{PF}|}{\sqrt{|tweet|}}
         \]
     \end{center}
 \end{frame}
@@ -375,8 +375,8 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Evaluación en el conjunto de entrenamiento III}
+\begin{frame}[allowframebreaks]
+    \frametitle{Inconsistencias en el corpus}
 
     \begin{itemize}
         \item Siguiendo la distancia mínima de edición en tweets (la granularidad es una palabra): se encontraron 367 pares de tweets ``parecidos'' pero con distinto valor de la clase objetivo.
@@ -395,13 +395,12 @@
 
         69\% jugar con lo que vas encontrando.
     \end{example}
-\end{frame}
-\note{
-    En este caso son casi las mismas palabras, pero distinto espaciado y puntuación.
-}
 
-\begin{frame}
-    \frametitle{Evaluación en el conjunto de entrenamiento IV}
+    \note{
+        En el primer caso son casi las mismas palabras, pero distinto espaciado y puntuación.
+    }
+
+    \framebreak
 
     \begin{itemize}
         \item Luego se buscan aquellos con mismos valores de atributos pero distinta clase: 30 pares encontrados.
@@ -417,7 +416,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Evaluación en el conjunto de entrenamiento V}
+    \frametitle{Inconsistencias en el corpus III}
 
     \begin{itemize}[<+->]
         \item Hay inconsistencias en la anotación (era esperado)
