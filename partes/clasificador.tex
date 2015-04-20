@@ -285,34 +285,6 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Primer clasificador}
-\begin{frame}
-    \frametitle{Primer clasificador}
-
-    \begin{itemize}[<+->]
-        \item Primero se optimizaron los parámetros de los distintos tipos de clasificadores
-        \item Resultados
-
-        \begin{center}
-            \scriptsize
-
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
-                \hline
-                \textbf{SVM} & \textbf{84,60} & 66,23 & \textbf{74,29} & 93,53 & 97,59 & \textbf{95,52} & \textbf{92,37} \\
-                \hline
-                \textbf{DT}  & 65,03 & 65,19 & 65,10 & 93,04 & 92,98 & 93,01 & 88,53 \\
-                \hline
-                \textbf{GNB} & 59,68 & \textbf{76,78} & 66,49 & \textbf{95,06} & 89,17 & 92,01 & 87,04 \\
-                \hline
-                \textbf{MNB} & 84,57 & 58,83 & 69,37 & 92,24 & \textbf{97,85} & 94,97 & 91,35 \\
-                \hline
-                \textbf{kNN} & 82,19 & 64,26 & 71,12 & 93,16 & 97,21 & 95,14 & 91,76 \\
-            \end{tabular}
-        \end{center}
-    \end{itemize}
-\end{frame}
-
 \subsection{Selección de características}
 \begin{frame}[allowframebreaks]
     \frametitle{Selección de características}
@@ -327,25 +299,29 @@
     \end{center}
 \end{frame}
 
-\subsection{Clasificador final}
+\subsection{Resultados obtenidos}
 \begin{frame}
-    \frametitle{Clasificador final}
+    \frametitle{Resultados obtenidos}
 
     \begin{center}
         \scriptsize
 
         \begin{tabular}{ c | r | r | r | r | r | r | r }
-            \textbf{Clas./Med.} & precisión & recall & $F_1$ & prec. neg. & rec. neg. & $F_1$ neg. & acierto \\
+            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
             \hline
-            \textbf{SVM} & \textbf{83,61} & 68,85 & \textbf{75,52} & 93,84 & 97,24 & \textbf{95,51} & \textbf{92,45} \\
+            LB1 & 61,68 & \textbf{84,63} & 71,35 & \textbf{96,59} & 89,23 & 71,35 & 88,45 \\
             \hline
-            \textbf{DT} & 66,51 & 67,54 & 67,02 & 93,33 & 93,03 & 93,18 & 88,85 \\
+            LB2 & indefinido & 0,00 & indefinido & 83,00 & \textbf{100,00} & 90,71 & 83,00 \\
             \hline
-            \textbf{GNB} & 57,49 & \textbf{78,17} & 66,25 & \textbf{95,17} & 88,16 & 91,53 & 86,46 \\
+            SVM & \textbf{83,61} & 68,85 & \textbf{75,52} & 93,84 & 97,24 & \textbf{95,51} & \textbf{92,45} \\
             \hline
-            \textbf{MNB} & 84,76 & 60,02 & 70,27 & 92,27 & \textbf{97,79} & 94,95 & 91,37 \\
+            DT & 66,51 & 67,54 & 67,02 & 93,33 & 93,03 & 93,18 & 88,85 \\
             \hline
-            \textbf{kNN} & 81,26 & 66,31 & 73,03 & 93,35 & 96,87 & 95,08 & 91,67 \\
+            GNB & 57,49 & \textbf{78,17} & 66,25 & \textbf{95,17} & 88,16 & 91,53 & 86,46 \\
+            \hline
+            MNB & 84,76 & 60,02 & 70,27 & 92,27 & \textbf{97,79} & 94,95 & 91,37 \\
+            \hline
+            KNN & 81,26 & 66,31 & 73,03 & 93,35 & 96,87 & 95,08 & 91,67 \\
         \end{tabular}
 
         \vfill
