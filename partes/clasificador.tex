@@ -27,57 +27,26 @@
     TODO: escribir ventajas
 }
 
-\subsubsection{Subcorpus}
-\begin{frame}
-    \frametitle{Subcorpus}
-
-    \begin{itemize}[<+->]
-        \item Subcorpus de cuentas de no humor (100\% No humor)
-        \item Subcorpus de cuentas de humor
-        \begin{itemize}[<+->]
-            \item Humor
-            \item No humor
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
 \subsection{Línea base}
-\begin{frame}
+\begin{frame}[allowframebreaks]
     \frametitle{Línea base}
 
-    \begin{enumerate}[<+->]
+    \begin{enumerate}
         \item BoW + MNB
 
-        \begin{itemize}
-            \item Acierto 83,51\%
-
-            \begin{center}
-                \begin{tabular}{ c | r | r | r }
-                    \textbf{BOW} & precisión & recall & {\color{blue} $F_1$} \\
-                    \hline
-                    No humor & 97,72 & 86,06 & 88,80 \\
-                    \hline
-                    Humor & 63,12 & 75,42 & 68,73 \\
-                \end{tabular}
-            \end{center}
-        \end{itemize}
-
-        \item Clasificador que predice según lo que dice la mayoría (No humor)
-
-        \begin{itemize}
-            \item {\color{blue} Acierto} 83\%
-
-            \begin{center}
-                \begin{tabular}{ c | r | r | r }
-                    \textbf{No humor} & precisión & recall & $F_1$ \\
-                    \hline
-                    No humor & 100,00 & 83,00 & 90,71 \\
-                    \hline
-                    Humor & NaN & 0,00 & NaN \\
-                \end{tabular}
-            \end{center}
-        \end{itemize}
+        \item Clasificador que predice según lo que dice la mayoría (Negativo)
     \end{enumerate}
+
+    \begin{center}
+        \scriptsize
+        \begin{tabular}{ c | r | r | r | r | r | r | r }
+            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \hline
+            LB1 & 65,15 & 82,71 & 72,89 & 96,33 & 91,19 & 93,65 & 89,71 \\
+            \hline
+            LB2 & indefinido & 0,00 & indefinido & 82,49 & 100,00 & 90,41 & 82,49 \\
+        \end{tabular}
+    \end{center}
 \end{frame}
 
 \subsection{Características}
@@ -246,7 +215,7 @@
 
     \begin{center}
         \[
-            PalabrasMayusculas(tweet) = \frac{|\{palabras mayusculas\}|}{\sqrt{|tweet|}}
+            PalabrasMayusculas(tweet) = \frac{|\{palabras\ mayusculas\}|}{\sqrt{|tweet|}}
         \]
     \end{center}
 \end{frame}
