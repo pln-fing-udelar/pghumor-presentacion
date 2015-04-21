@@ -406,6 +406,28 @@
     \end{itemize}
 \end{frame}
 
+\subsubsection{Tweets censurados}
+\begin{frame}
+    \frametitle{Tweets censurados}
+
+    \begin{itemize}[<+->]
+        \item El clasificador está sesgado a no conocer los tweets con contenido explícito
+        \item Se anotan a mano los 303 tweets censurados y se agregan
+        \item Hay una pequeña mejora:
+        \begin{center}
+            \scriptsize
+            \begin{tabular}{ c | r | r | r | r | r | r | r }
+                \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+                \hline
+                Antes & 83,61 & 68,85 & 75,52 & 93,84 & 97,24 & 95,51 & 92,45 \\
+                \hline
+                Después & 84,01 & 69,59 & 76,13 & 93,74 & 97,17 & 95,43 & 92,32 \\
+            \end{tabular}
+        \end{center}
+        \item Un nuevo estudio de importancia de las características revela que no varía Jerga sexual: se agrega más variedad que jerga sexual.
+    \end{itemize}
+\end{frame}
+
 \subsubsection{Restricción a cuentas humorísticas}
 \begin{frame}
     \frametitle{Restricción a cuentas humorísticas}
@@ -453,28 +475,6 @@
                 No humor & 0,0256 & 0,0300 \\
             \end{tabular}
         \end{center}
-    \end{itemize}
-\end{frame}
-
-\subsubsection{Tweets censurados}
-\begin{frame}
-    \frametitle{Tweets censurados}
-
-    \begin{itemize}[<+->]
-        \item El clasificador está sesgado a no conocer los tweets con contenido explícito
-        \item Se anotan a mano los 303 tweets censurados y se agregan
-        \item Hay una pequeña mejora:
-        \begin{center}
-            \scriptsize
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-                \hline
-                Antes & 83,61 & 68,85 & 75,52 & 93,84 & 97,24 & 95,51 & 92,45 \\
-                \hline
-                Después & 84,01 & 69,59 & 76,13 & 93,74 & 97,17 & 95,43 & 92,32 \\
-            \end{tabular}
-        \end{center}
-        \item Un nuevo estudio de importancia de las características revela que no varía Jerga sexual: se agrega más variedad que jerga sexual.
     \end{itemize}
 \end{frame}
 
