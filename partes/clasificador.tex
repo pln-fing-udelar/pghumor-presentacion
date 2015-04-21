@@ -4,7 +4,7 @@
 \begin{frame}
     \frametitle{Metodología}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Se utilizan SVM, kNN, DT, GNB y MNB.
         \item Se divide en 80\% entrenamiento y 20\% evaluación.
         \item Se usa validación cruzada sobre el conjunto de entrenamiento para resultados intermedios durante el desarollo y el conjunto de evaluación para el resultado final.
@@ -41,7 +41,7 @@
 \begin{frame}
     \frametitle{Qué se busca}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Contradicción y negatividad
         \item Formato e informalidad
         \item Orientación en personas
@@ -103,11 +103,11 @@
 \begin{frame}
     \frametitle{Distancia temática}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Cercanía a un chiste de Chistes.com o cercanía a una oración de la Wikipedia.
         \item BoW + MNB
         \item Categorías
-        \begin{itemize}[<+->]
+        \begin{itemize}
             \item Chistes cortos
             \item Adivinanzas
             \item Animales
@@ -324,7 +324,7 @@
 \begin{frame}
     \frametitle{Evaluación en el conjunto de entrenamiento II}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item ¿Por qué DT no da 100\%? Debería darlo.
         \item Las características no discriminan completamente a la clase.
         \item ¿Hay errores en el corpus?
@@ -374,7 +374,7 @@
 \begin{frame}
     \frametitle{Inconsistencias en el corpus III}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Hay inconsistencias en la anotación (era esperado)
         \item Hay una mejora sobre el corpus de entrenamiento quitando estas instancias:
 
@@ -390,7 +390,7 @@
         \end{center}
     \end{itemize}
 
-    \begin{itemize}[<3>]
+    \begin{itemize}
         \item Y en el de corpus de evaluación:
 
         \begin{center}
@@ -410,7 +410,7 @@
 \begin{frame}
     \frametitle{Tweets censurados}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item El clasificador está sesgado a no conocer los tweets con contenido explícito
         \item Se anotan a mano los 303 tweets censurados y se agregan
         \item Hay una pequeña mejora:
@@ -432,7 +432,7 @@
 \begin{frame}
     \frametitle{Restricción a cuentas humorísticas}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Es una tarea más difícil
         \item Igualmente se logran buenos resultados:
 
@@ -458,7 +458,7 @@
 \begin{frame}
     \frametitle{Métricas ponderadas según calificación}
 
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Tiene sentido sólo para los tweets que tuvieron votos y para la medida recall
         \item Promedio de estrellas, $PE_t = \frac{\sum_{i = 1}^{5} i \times v_{ti}}{v_t}$
         \item $recall_{ponderado} = \frac{\sum_{t \in VP} PE_t} {\sum_{t \in VP} PE_t + \sum_{t \in FN} PE_t} = 70.68\%$
