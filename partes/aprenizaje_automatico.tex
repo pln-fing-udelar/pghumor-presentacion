@@ -51,15 +51,29 @@
     \frametitle{Naïve Bayes (NB)}
 
     \begin{center}
-        \[
-            P(A|B) = \frac{P(B|A) P(A)}{P(B)}
-        \]
+        \begin{tabular}{c | c | c | c | c}
+            & \multicolumn{2}{c |}{Altura} & \multicolumn{2}{c}{Largo del pelo} \\
+            \hline
+            & Alto & Bajo & Largo & Corto \\
+            \hline
+            Hombre & 0,80 & 0,20 & 0,25 & 0,75 \\
+            \hline
+            Mujer & 0,30 & 0,70 & 0,90 & 0,10 \\
+        \end{tabular}
+
+        \vfill
+
+        Es igual de probable ser hombre o mujer.
+
+        \vfill
+
+        ¿Si alguien es alto y de pelo corto?
+
+        \vfill
 
         \begin{align*}
-            c &= \argmax_{c \in C} P(c|a_1, \ldots, a_n) \\
-            &= \argmax_{c \in C} \frac{P(a_1, \ldots, a_n|c) P(c)}{P(a_1, \ldots, a_n)} \\
-            &= \argmax_{c \in C} P(a_1, \ldots, a_n|c) P(c) \\
-            &\approx \argmax_{c \in C} P(c) \prod_{i=1}^n P(a_i|c) \\
+            P(Altura=Alto|Hombre) \times P(Largo\ del\ pelo=Corto|Hombre) &= 0,60 \\
+            P(Altura=Alto|Mujer) \times P(Largo\ del\ pelo=Corto|Mujer) &= 0,05
         \end{align*}
     \end{center}
 \end{frame}
