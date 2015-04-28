@@ -540,11 +540,8 @@
     \frametitle{Métricas ponderadas según calificación}
 
     \begin{itemize}
-        \item Tiene sentido sólo para los tweets que tuvieron votos y para la medida recall
-        \item Promedio de estrellas, $PE_t = \frac{\sum_{i = 1}^{5} i \times v_{ti}}{v_t}$
-        \item $recall_{ponderado} = \frac{\sum_{t \in VP} PE_t} {\sum_{t \in VP} PE_t + \sum_{t \in FN} PE_t} = 70.7\%$
-        \item $\frac{recall_{ponderado}}{recall} = \frac{prom_{VP}}{prom_H} = 1.0266$
-        \item Hay un (muy) leve sesgo del clasificador SVM a dar como positivos aquellos tweets que tienen mayor promedio de estrellas.
+        \item ¿El clasificador acierta más a tweets con mayor promedio de estrellas?
+        \item Se construye una medida de Recall ponderado y se comprueba que existe esta tendencia aunque levemente.
         \item Matriz de confusión:
 
         \begin{center}
@@ -552,8 +549,6 @@
                 \textbf{son/clasificados} & Humor & No humor \\
                 \hline
                 Humor & 2,7227 & 2,4961 \\
-                \hline
-                No humor & 0,0256 & 0,0300 \\
             \end{tabular}
         \end{center}
     \end{itemize}
