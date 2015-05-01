@@ -1,6 +1,8 @@
 \PassOptionsToPackage{spanish}{translator}
 \documentclass{beamer} %[handout, notes=only]
 
+\usepackage{etex} % Porque sino al usar muchos paquetes da error.
+
 \usepackage[spanish, es-tabla]{babel}
 
 %\uselanguage{spanish}
@@ -105,6 +107,12 @@
     Facultad de Ingeniería, Universidad de la República
 }
 \date{\today}
+
+\usepackage{pgfpages}
+
+\mode<handout>{
+  \pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=2.5mm]
+}
 
 \begin{document}
 
