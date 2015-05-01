@@ -52,28 +52,29 @@
 
     \begin{center}
         \begin{tabular}{c | c | c | c | c}
-            & \multicolumn{2}{c |}{Altura} & \multicolumn{2}{c}{Largo del pelo} \\
+            & \multicolumn{2}{c |}{Ambigüedad} & \multicolumn{2}{c}{Jerga sexual} \\
             \hline
-            & Alto & Bajo & Largo & Corto \\
+            & Sí & No & Alta & Baja \\
             \hline
-            Hombre & 0,80 & 0,20 & 0,25 & 0,75 \\
+            Humor & 0,90 & 0,10 & 0,80 & 0,20 \\
             \hline
-            Mujer & 0,30 & 0,70 & 0,90 & 0,10 \\
+            No humor & 0,30 & 0,70 & 0,25 & 0,75 \\
         \end{tabular}
 
         \vfill
 
-        Es igual de probable ser hombre o mujer.
+        Un tweet es apriori igual de probable de ser humor o no.
 
         \vfill
 
-        ¿Si alguien es alto y de pelo corto?
+        ¿Si tengo un tweet ambiguo y con jerga sexual?
 
         \vfill
 
+        \small
         \begin{align*}
-            P(Altura=Alto|Hombre) \times P(Largo\ del\ pelo=Corto|Hombre) &= 0,60 \\
-            P(Altura=Alto|Mujer) \times P(Largo\ del\ pelo=Corto|Mujer) &= 0,05
+            P(Ambiguedad=Si|Humor) \times P(Jerga sexual=Alta|Humor) &= 0.72 \\
+            P(Ambiguedad=Si|No\ humor) \times P(Jerga sexual=Alta|No\ humor) &= 0.075
         \end{align*}
     \end{center}
 \end{frame}
