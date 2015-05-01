@@ -116,6 +116,8 @@
         \item kappa evalúa cuán mejor es la votación respecto a una al azar, siendo lo mejor posible 1 y siendo 0 una votación al azar.
     \end{itemize}
 
+    \note{Interesa saber cuál fue la concordancia entre los anotadores, es decir, qué tan de acuerdo estuvo la gente a la hora de anotar como humor (1, 2, 3, 4 o 5 estrellas) o como humorístico a los tweets. Se propone utilizar la medida kappa. Esta medida se fija la cantidad de pares de anotadores que están de acuerdo en cada categoría para cada tweet. El resultado es un número, en donde 0 significa una anotación hecha al azar y 1 es el mejor acuerdo posible.}
+
     \framebreak
 
     \begin{center}
@@ -138,6 +140,8 @@
         \includegraphics{kappa.png}
     \end{center}
 
+    \note{El resultado obtenido para todos los tweets votados por más de una persona es de 0,6. También calculamos según una cantidad mínima de votos, y vemos que el valor de la medida kappa baja, como lo muestra la gráfica. Esto tiene sentido porque a más cantidad de votantes, más discrepancia posible hay.}
+
     \framebreak
 
     \begin{itemize}
@@ -147,4 +151,6 @@
             \item No hay unanimidad claramente
         \end{itemize}
     \end{itemize}
+
+    \note{¿Cómo fue el acuerdo entre las personas entonces? Se considera que es bastante bueno, este número es considerado en general bastante bueno. Las personas en general están de acuerdo cuándo un tweet es humor. Aunque notar que es claro que en el humor no hay unanimidad en absoluto, lo cual era esperado.}
 \end{frame}
