@@ -1,5 +1,7 @@
 \section{Aprendizaje Automático}
 
+\note{Una vez que tenemos una idea general de lo que se quiere hacer y que tenemos un conjunto de datos para trabajar, procederíamos a mostrar nuestra implementación del clasificador. Pero antes es necesario estar en contexto sobre las técnicas utilizadas en este trabajo, que son del área \textbf{Aprendizaje Automático}.}
+
 \begin{frame}
     \frametitle{Aprendizaje Automático}
 
@@ -10,6 +12,12 @@
     \end{itemize}
 \end{frame}
 
+\note{Aprendizaje Automático es un área que tiene como objetivo hacer \textbf{aprender} a una computadora.
+
+A su vez nosotros nos vamos a concentrar en lo que es el aprendizaje \textbf{supervisado}, es decir, aprender en base a ejemplos claramente etiquetados. En nuestro caso se aprenderá en base a tweets etiquetados como Humor o como No humor.
+
+La tarea particular que queremos realizar se llama \textbf{clasificación}, y esto es que queremos asignarle una etiqueta (Humor o No humor) a una instancia, a un tweet.}
+
 \subsection{Clasificadores}
 \begin{frame}
     \frametitle{Clasificadores}
@@ -19,6 +27,10 @@
     \end{itemize}
 \end{frame}
 
+\note{En cuanto a los clasificadores, ellos deciden en base a \textbf{características}, a valores, y además hacen suposiciones para generalizar cómo se comporta lo que se quiere buscar, en este caso el humor.
+
+A continuación vamos a mostrar 4 técnicas que usamos en este trabajo, que hacen suposiciones distintas.}
+
 \begin{frame}
     \frametitle{Support Vector Machine (SVM)}
 
@@ -27,6 +39,10 @@
     \end{center}
 \end{frame}
 
+\note{La primera técnica que mostramos es Suport Vector Machine o SVM. SVM se basa en primero pasar las instancias a un espacio vectorial, en donde cada componente de cada tweet tiene el valor de una característica. Por ejemplo un tweet puede tener 1 en Ambigüedad y 3,5 en Jerga sexual. SVM intenta buscar la curva que mejor separe los ejemplos de las distintas clases.
+
+Se muestra un ejemplo acá. En este caso el espacio vectorial es un plano y la curva elegida es una recta. Los ejemplos en este caso quedaron completamente separados, y es lo que supone SVM, pero no siempre ocurre esto.}
+
 \begin{frame}
     \frametitle{Árbol de decisión (DT)}
 
@@ -34,6 +50,12 @@
         \includegraphics{dts.png}
     \end{center}
 \end{frame}
+
+\note{También usamos los Árboles de decisión. Ellos son estructuras en forma de árbol que en los nodos internos preguntan por atributos y en las ramas que salen de ellos se desprenden los valores posibles. En las hojas tienen categorías posibles.
+
+El algoritmo de aprendizaje automático utilizado para armarlos se basa en la idea que las características más discriminantes deben ir más arriba en el árbol.
+
+Mostramos un ejemplo, para contrastar con otras técnicas. En este clasificador para predecir una instancia se pregunta primero por si es ambiguo un tweet. Si lo es, se considera humorístico. Si no, se pregunta por el valor de Jerga sexual. Si es alto, es humorístico y sino es no humorístico.}
 
 \begin{frame}
     \frametitle{Naïve Bayes (NB)}
@@ -67,6 +89,12 @@
     \end{center}
 \end{frame}
 
+\note{Por otro lado están los clasificadores bayesianos ingenuos. Se basan en el Teorema de Bayes.
+
+Los mostramos con el siguiente ejemplo. Supongamos que tenemos que hay alta probabilidad de que un tweet humorístico sea ambiguo y tenga jerga sexual, y que si no es humorístico es baja en general. ¿Qué pasaría si tenemos un tweet ambiguo y con altos valores de Jerga sexual, suponiendo que estamos en un mundo con a priori igual cantidad de humor y tweets no humorísticos? Mirando las probabilidades por separado de cada características podemos obtener la categoría más probable.
+
+Naïve Bayes hace esto: mira las probabilidades de cada característica según cada categoría para decidir.}
+
 \begin{frame}
     \frametitle{k Nearest Neighbors (kNN)}
 
@@ -74,7 +102,10 @@
         \includegraphics{knn.png}
     \end{center}
 \end{frame}
-\note{\textbf{k Nearest Neighbors} (kNN), o los \emph{k} vecinos más cercanos, es un tipo de clasificador que para predecir el valor de una instancia mira otras consideradas cercanas. De manera similar a SVM usa un espacio vectorial para representar las instancias. El dibujo ilustra que se quiere clasificar el círculo como rojo o azul. Mirando las tres más cercanas, se da por rojo, aunque las cinco más cercanas da por ejemplo azul. El \emph{k} influye. También se puede hacer ponderar la distancia de las instancias más cercanas.}
+
+\note{Por último está \textbf{k Nearest Neighbors} (kNN), o los \emph{k} vecinos más cercanos, que es un tipo de clasificador que para predecir el valor de una instancia mira otras consideradas cercanas. De manera similar a SVM usa un espacio vectorial para representar las instancias. El dibujo ilustra que se quiere clasificar el círculo como rojo o azul. Mirando las tres más cercanas, se da por rojo, aunque las cinco más cercanas da por ejemplo azul.
+
+Siguiendo el ejemplo de los tweets, se podría predecir una instancia en base a tweets con valores de Ambigüedad y Jerga sexual parecidos.}
 
 \subsection{Metodología}
 \begin{frame}
@@ -84,8 +115,9 @@
         \item Entrenamiento y evaluación
     \end{itemize}
 \end{frame}
+
 \note{
-    TODO: explicar qué es Entrenamiento y qué es Evaluación.
+    ¿Qué metodología se lleva a cabo? Usualmente se separa en etapas de Entrenamiento y Evaluación. Primero se dividen los datos en conjunto de entrenamiento y conjunto de evaluación. Con la primera parte se ajusta el algoritmo, y los parámetros de la técnica utilizada. Luego se utiliza el conjunto de evaluación para tomar medidas del clasificador, para ver qué tan bien le va a la hora de predecir y para poder compararlo con otros.
 }
 
 \subsection{Métricas}
@@ -120,17 +152,19 @@
         \end{column}
     \end{columns}
 \end{frame}
-\note{
-    Es importante contar con medidas para poder evaluar el desempeño de un aprendiz y poder compararlo con otros.
-
-    En el caso de la clasificación es necesario distinguir a las instancias según el tipo de resultado obtenido. La imagen puede ayudar a identificarlos. La primera es \textbf{Verdaderos positivos}, que es la parte verde dentro de la elipse. En la imagen yo quiero distinguir los puntos rellenos, y esta clase son aquellos que clasifiqué correctamente de los rellenos. Los \textbf{Falsos positivos} son los que clasifiqué incorrectamente, es decir la parte roja de la elipse. En la elipse están todos los que yo dije que eran positivos. Luego los \textbf{Falsos negativos} son la parte roja fuera de la elipse, que el clasificador dijo que eran negativos pero en realidad son puntos rellenos, por lo tanto ``no los encontré''. Luego están los \textbf{Verdaderos negativos} que son aquellos que correctamente dejé afuera, y es la partición que queda de la ilustración.
-}
-\note{
-    A partir de lo anterior, se definen 4 medidas. \textbf{Precisión} (ilustrada por la P en el dibujo) es el porcentaje de instancias correctamente etiquetadas como positivas. Es la relación entre la parte verde de la elipse y la elipse en sí (no le importan los negativos). Presta atención a los errores de tipo I (falsos positivos). El \textbf{Recall} (ilustrado por la R en el dibujo) mide la relación entre los correctamente encontrados respecto a todos los que positivos había. De esta manera presta atención a los errores de tipo II (falsos negativos). Tampoco le importa la correcta clasificación de los negativos. La medida \textbf{$F_1$} es muy similar a las anteriores, pero pondera de igual manera los dos tipos de errores. Se puede ver como una medida promedio. A su vez está el \textbf{Acierto}, que es el porcentaje de instancias correctamente clasificadas (de cualquier tipo, esta sí mira los negativos).
-}
 
 \note{
-    TODO: resumir esto y hablar en la parte de resultados.
-    
-    En algunos tipos de clasificadores, como SVM y kNN, hay una función de distancia implícitamente definida, en la cual los distintos valores de cada característica imponen un peso en la misma. Por ejemplo, si se tiene una característica binaria que indica con 0 o 1 la presencia de cierta palabra en un tweet y otra característica que cuenta la cantidad de letras, la última toma valores muchos más grandes y una diferencia de dos letras en un tweet representarían una distancia mayor que dos tweets con distintos valores en la primera característica, aunque no necesariamente es cierto que una distancia sea mayor que la otra. A métodos que estandaricen los datos de esta manera se dice que hacen Escalado de características. Se puede resolver este problema realizando un Reescalado, dejando los valores de todas las características en el mismo rango, como [0, 1], por ejemplo. Pero adicionalmente, cuando se entrena con SVM con ciertos tipos de curvas, se asumen que los datos tienen la misma varianza y están centrados en cero. Entonces se preprocesan los valores de los atributos para que queden con promedio cero y desviación estándar uno. A esto se le conoce como Estandarización. Para el caso puntual de MNB no tiene sentido hacer escalado ya que supone que las características tienen distribución multinomial, es decir de un dominio discreto. A su vez el clasificador no permite valores negativos de características, por lo tanto un centrado tampoco aplica.
+    Es importante contar con medidas para poder evaluar el desempeño de un aprendiz y poder compararlo con otros, como dijimos.
+
+    Supongamos primero que queremos distinguir los círculos (que son los positivos) de las circunferencias (que son los negativos). Recordemos que en nuestro caso positivo es igual a Humor. En el ejemplo la solución se encuentra al mirar las figuras a uno y otro lado de la línea recta. Pero el clasificador del ejemplo considera como positivos a los que se encuentran dentro de la elipse.
+
+    Es necesario distinguir a las instancias según el tipo de resultado obtenido al predecir. Los verdaderos y falsos positivos [mostrar en la imagen] son aquellos considerados como positivos por el clasificador de manera correcta y de manera incorrecta respectivamente. De manera similar tenemos los verdaderos y falsos negativos [mostrar en la imagen], es decir los considerados negativos por el clasificador correcta e incorrectamente clasificados.
+}
+
+\note{
+    A partir de lo anterior, se definen 4 medidas. \textbf{Precisión} (ilustrada por la P en el dibujo) es la fracción de instancias correctamente etiquetadas como positivas según todas las consideradas positivas. Es la relación entre la parte verde de la elipse y la elipse en sí. Presta atención a los errores de falso positivo. El \textbf{Recall} (ilustrado por la R en el dibujo) mide la relación entre los correctamente encontrados respecto a todos los que positivos había. De esta manera presta atención a los errores de tipo II (falsos negativos). La medida \textbf{$F_1$} es muy similar a las anteriores, pero pondera de igual manera los dos tipos de errores. Se puede ver como una medida promedio de las anteriores también.
+
+    Notar que estas medidas le prestan atención a los positivos. Si se quiere hacer lo mismo con los negativos, basta con dar vuelta los roles positivo-negativo.
+
+    A su vez está el \textbf{Acierto}, que es el porcentaje de instancias correctamente clasificadas, de cualquier tipo.
 }
