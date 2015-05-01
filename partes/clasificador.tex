@@ -1,5 +1,7 @@
 \section{Clasificador}
 
+\note{Una vez que estamos en contexto con el área, procedemos a hablar de la implementación del clasificador.}
+
 \subsection{Metodología}
 \begin{frame}
     \frametitle{Metodología}
@@ -10,9 +12,10 @@
         \item Se usa validación cruzada sobre el conjunto de entrenamiento para resultados intermedios durante el desarollo y el conjunto de evaluación para el resultado final.
     \end{itemize}
 \end{frame}
-\note{
-    Se usa el conjunto de evaluación al final para no sesgarse demasiado a los resultados.
-}
+
+\note{Primero hablamos de la metodología que usamos. Se utilizan las técnicas, SVM, Vecinos más cercanos, Árboles de decisión y dos tipos de clasificadores Naïve Bayes: uno que supone que las probabilidades siguen una distribución gaussiana y otro que supone que siguen una distribución multinomial.
+
+Dividimos el corpus en 80\% entrenamiento y 20\% evaluación. El corpus de evaluación lo dejamos para el final de manera de intentar no sesgarse demasiado a los resultados y que las métricas no sean mentirosas. Mientras se desarrollan las características y el clasificador se utiliza una técnica llamada validación cruzada para evaluar al clasificador. Cuando se quieren estudiar casos puntuales de error, como por ejemplo tweets falsos positivos, se ha partido nuevamente al conjunto de entrenamiento en entrenamiento y evaluación.}
 
 \subsection{Línea base}
 \begin{frame}
@@ -36,6 +39,14 @@
     \end{center}
 \end{frame}
 
+\note{Decidimos establecer una línea base para comparar contra las técnicas utilizadas.
+
+El primero de ellos es un modelo llamado Bag of Words, o bolsa de palabras. La idea es transformar cada tweet en un vector de conteos de las palabras que aparecen. Es decir, las características son cada una de las palabras que aparecen en los tweets. Un tweet por ejemplo puede tener la palabra ``mesa'' 2 veces, la palabra ``arte'' una vez y la palabra ``plato'' ninguna vez. Se combina esto con un clasificador Naïve Bayes multinomial.
+
+El segundo es un clasificador mucho más simple. Se limita a predecir en base a la categoría que fue más frecuente en la etapa de entrenamiento. Dice lo que dice la mayoría, en otras palabras. En este caso dice que todo es negativo, No humor, porque observó al rededor de 83\% de negativos al entrenar.}
+
+\note{Acá se muestran los números que se obtuvieron, en donde tenemos la Precisión [señalar], Recall, F1, lo mismo para los negativos y finalmente el acierto. Se puede observar que la primera línea base supera ampliamente a la segunda.}
+
 \subsection{Características}
 
 \begin{frame}
@@ -52,6 +63,8 @@
     \end{itemize}
 \end{frame}
 
+\note{Ahora vamos a hablar de las características implementadas. Básicamente buscamos las siguientes cosas: contradicción y negatividad en los tweets, determinado tipo de formato sintáctico, informalidad, que estén centrados en personas y temas recurrentes en chistes.}
+
 \begin{frame}
     \frametitle{Contradicción y negatividad}
     \framesubtitle{Antónimos}
@@ -67,6 +80,8 @@
     \end{center}
 \end{frame}
 
+\note{Buscando contradicción realizamos la característica Antónimos. Se cuenta la cantidad de pares de antónimos en el tweet en relación a su largo.}
+
 \begin{frame}
     \frametitle{Contradicción y negatividad}
     \framesubtitle{Negación}
@@ -75,6 +90,8 @@
         \item Cantidad de ``no'' en el tweet
     \end{itemize}
 \end{frame}
+
+\note{Se hace también la característica Negación. Se cuenta la cantidad de ``no'' en el tweet.}
 
 \begin{frame}
     \frametitle{Formato}
@@ -85,6 +102,8 @@
     \end{itemize}
 \end{frame}
 
+\note{En cuanto al Formato tenemos primero a Diálogo. Indica si el tweet es un diálogo o no.}
+
 \begin{frame}
     \frametitle{Formato}
     \framesubtitle{Links}
@@ -94,6 +113,8 @@
     \end{itemize}
 \end{frame}
 
+\note{Luego sigue Links, que cuenta la cantidad de enlaces en el tweet. Como el humor que buscamos debe ser expresado completamente en textos no tendría sentido un enlace a una imagen por ejemplo.}
+
 \begin{frame}
     \frametitle{Formato}
     \framesubtitle{Preguntas-respuestas}
@@ -102,6 +123,8 @@
         \item Cantidad de preguntas seguidas de respuestas en el tweet.
     \end{itemize}
 \end{frame}
+
+\note{Preguntas-respuestas: se cuenta la cantidad de preguntas seguidas de respuestas que hay en el tweet.}
 
 \begin{frame}
     \frametitle{Informalidad}
@@ -118,6 +141,8 @@
     \end{center}
 \end{frame}
 
+\note{Mirando la Informalidad tenemos por un lado la Exclamación. Cuenta la cantidad de signos de exclamación en relación al largo del tweet. Suele indicar informalidad y potencialmente humor.}
+
 \begin{frame}
     \frametitle{Informalidad}
     \framesubtitle{Hashtags}
@@ -127,13 +152,17 @@
     \end{itemize}
 \end{frame}
 
+\note{Hashtags: cuenta la cantidad de hashtags en el tweet.}
+
 \begin{frame}
     \frametitle{Informalidad}
     \framesubtitle{Palabras fuera del vocabluario (OOV)}
 
     \begin{itemize}
         \item Cantidad de palabras fuera del vocabulario, dividido entre el total
+
         \item Son varias características:
+
         \begin{itemize}
             \item Freeling
             \item Freeling-Google
@@ -142,8 +171,11 @@
         \end{itemize}
     \end{itemize}
 \end{frame}
+
 \note{
-    Las distintas combinaciones de vocabulario debido a costo de uso y debido a ventajas y desventajas de cada uno. \textbf{Freeling} el más barato de usar, offline. Tiene un español más clasico, pero no tiene palabras ``nuevas''. \textbf{Wiktionary} tiene un término medio de todo. Es online, pero no limita su uso. Con \textbf{Google} se pueden obtener muchas palabras ``nuevas'' (como iPhone) y también detección de errores ortográficos, pero limita su uso.
+    Luego sigue OOV. Son cuatro características que cuentan la cantidad de palabras fuera del vocabulario en relación al largo del tweet.
+
+    Las distintas combinaciones de diccionarios es debido a ventajas y desventajas de cada uno. \textbf{Freeling} es una herramienta que posee el diccionario más barato de usar que tenemos, porque es offline. Tiene un español más clásico, pero no tiene palabras ``nuevas''. \textbf{Wiktionary} tiene un término medio de todo. Es online, pero no limita su uso, y además tiene algunas palabras modernas. Con \textbf{Google} se pueden obtener muchas palabras ``nuevas'' (como iPhone) y también detección de errores ortográficos, pero limita su uso.
 }
 
 \begin{frame}
@@ -161,6 +193,8 @@
     \end{center}
 \end{frame}
 
+\note{Palabras mayúsculas: se cuenta la cantidad de palabras totalmente en mayúsculas en relación a la cantidad de palabras del tweet. Cuando hay palabras en mayúsculas es como si estuvieran gritando en el tweet, lo cual da informalidad y potencialmente humor, ya que creemos que el humor suele ser informal.}
+
 \begin{frame}
     \frametitle{Informalidad}
     \framesubtitle{Palabras no españolas}
@@ -170,8 +204,10 @@
     \end{itemize}
 \end{frame}
 
+\note{Palabras no españolas: se cuenta la cantidad de palabras que contienen caracteres fuera del alfabeto español, normalizando según el total. Se fija por la presencia de caracteres raros que indican, de vuelta, informalidad.}
+
 \begin{frame}
-    \frametitle{Orientado a personas}
+    \frametitle{Orientación en personas}
     \framesubtitle{Primera y segunda persona}
 
     \begin{itemize}
@@ -179,14 +215,19 @@
     \end{itemize}
 \end{frame}
 
+\note{En cuanto a Orientación en personas tenemos Primera persona y Segunda persona, dos características. La primera busca palabras en primera persona, ya sean verbos, sustantivos, adjetivos; como ``hago'' o ``yo''. La segunda busca palabras como ``tú'' o ``haces''.}
+
 \begin{frame}
     \frametitle{Temas recurrentes en chistes}
     \framesubtitle{Distancia temática}
 
     \begin{itemize}
-        \item Cercanía a una categoría de chiste de Chistes.com o cercanía a una oración de la Wikipedia.
+        \item Cercanía a una categoría de chiste de Chistes.com o cercanía a una oración de Wikipedia.
+
         \item BoW + MNB
-        \item Categorías
+
+        \item Categorías:
+
         \begin{itemize}
             \item Chistes cortos
             \item Adivinanzas
@@ -196,7 +237,8 @@
         \end{itemize}
     \end{itemize}
 \end{frame}
-\note{TODO: Aclarar qué es atlantes.}
+
+\note{En Temas recurrentes en chistes tenemos primero Distancia temática. La idea es fijarse qué cercanía tiene un tweet a una categoría de chistes de la página Chistes.com, contrastando con oraciones de Wikipedia. Se toman las 5 categorías que más tienen chistes, armando 5 características entonces. Cada una arma un subclasificador, utilizando el modelo Bag of Words con Naïve Bayes multinomial, así como la primera línea base, tomando como características a los conteos de cada palabra. Se obtiene entonces una categoría (chiste de Chistes.com u oración de Wikipedia) y a la vez un número que indica la probabilidad de acercarse a una categoría, que es particularmente devuelto por Naïve Bayes.}
 
 \begin{frame}
     \frametitle{Temas recurrentes en chistes}
@@ -204,6 +246,7 @@
 
     \begin{itemize}
         \item Se arma un diccionario de jerga sexual mediante \emph{Bootstrapping} en Twitter.
+
         \item Intersección de multiconjuntos:
     \end{itemize}
 
@@ -213,6 +256,10 @@
         \]
     \end{center}
 \end{frame}
+
+\note{Jerga sexual. Se arma un diccionario de jerga sexual. Primero intuitivamente. Luego se refuerza mediante una técnica, llamada Bootstrapping, en la que se buscan tweets que aparezcan las palabras de este primer diccionario y nos fijamos qué palabras más co-ocurren con ellas, agrandando el diccionario.
+
+Luego nos fijamos la cantidad de palabras de los tweets que pertenecen a este diccionario, en relación al total de palabras del tweet.}
 
 \begin{frame}
     \frametitle{Temas recurrentes en chistes}
@@ -230,26 +277,26 @@
     \end{center}
 \end{frame}
 
+\note{En Palabras clave se arma un diccionario de palabras comunes en chistes empíricamente, como ``mamá'' y ``Jaimito'', y luego se procede de manera similar a la característica anterior con el diccionario.}
+
 \begin{frame}
     \frametitle{Temas recurrentes en chistes}
     \framesubtitle{Presencia de animales}
 
     \begin{itemize}
         \item Se conforma una lista de animales a partir de los chistes de animales de Chistes.com ($DIC_A$)
-        \item Intersección de multiconjuntos:
-    \end{itemize}
 
-    \begin{center}
-        \[
-            PresenciaAnimales(tweet) = \frac{|tweet \cap DIC_A|}{\sqrt{|tweet|}}
-        \]
-    \end{center}
+        \item Intersección de multiconjuntos:
+
+        \begin{center}
+            \[
+                PresenciaAnimales(tweet) = \frac{|tweet \cap DIC_A|}{\sqrt{|tweet|}}
+            \]
+        \end{center}
+    \end{itemize}
 \end{frame}
-\note{
-    Características simples.
-    $tweet$ es visto como una lista de tokens.
-    En general todas las featuers se normalizan según el largo del tweet en tokens, para no sesgar.
-}
+
+\note{Se conforma una lista de animales a partir de las palabras que aparecen en los chistes de animales de Chistes.com. Luego se procede como antes, contando la ocurrencia de palabras de un tweet en el diccionario y normalizando según la cantidad de palabras del tweet.}
 
 \subsection{Selección de características}
 \begin{frame}[allowframebreaks]
@@ -257,8 +304,13 @@
 
     \begin{itemize}
         \item ExtraTrees es usado para hacer un ranking de características.
+
         \item Se utiliza la Eliminación recursiva de atributos para seleccionar aquellos relevantes y no redundantes.
     \end{itemize}
+
+    \note{Luego se procede a seleccionar las características. La idea es quitar aquellas irrelevantes o redundantes. Se procede primero utilizando una técnica llamada ExtraTrees, que genera una cantidad fija de Árboles de decisión aleatorios, y se fija qué características discriminan mejor. Se utiliza para hacer un ranking de las características.
+
+    Luego se utiliza la Eliminación recursiva de atributos para seleccionar finalmente las características. La técnica procede a quitar las características más irrelevantes una a una y fijarse con qué número se obtiene mejor acierto.}
 
     \framebreak
 
@@ -321,6 +373,10 @@
         \end{tabular}
     \end{center}
 
+    \note{Se obtiene esta tabla. Se introducen dos características ficticias para comparar. La primera es CLASE, una característica que sabe exactamente si un tweet es humorístico o no, sabe la solución. Por otro lado está ALEATORIA, que tiene un valor aleatorio.
+
+    Observar que por ejemplo Diálogo, Preguntas-respuestas y las de Distancia temática son las características que más discriminan al humor. Ver por otro lado que características como las de OOV, Antónimos y Jerga sexual resultan ser peores que el azar.}
+
     \framebreak
 
     Eliminación recursiva de atributos:
@@ -333,6 +389,12 @@
         Se descartan Negación, Palabras no españolas y Antónimos
     \end{center}
 \end{frame}
+
+\note{Esta es la gráfica resultado que se obtiene de la Eliminación recursiva de atributos. El máximo acierto se obtiene al eliminar tres, pero observar que la variación total del acierto es muy poca, inclusive para el máximo. Notar también que sólo con una característica, en este caso Diálogo, se obtiene muy buen acierto.
+
+Finalmente se descartan entonces Negación, Palabras no españolas y Antónimos.
+
+A continuación mi compañero Matías va a proceder a mostrar los resultados obtenidos.}
 
 \subsection{Resultados obtenidos}
 \begin{frame}
