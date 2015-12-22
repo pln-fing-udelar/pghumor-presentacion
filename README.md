@@ -1,19 +1,20 @@
-# Presentación para la defensa de pgHumor
+# Slides for pgHumor's thesis defense
 
-## Compilación
+## Compilation
 
 ```bash
 latexmk main.tex
 ```
 
-## Dejar generando mientras se trabaja
+## Preview continuously
 
 ```bash
 latexmk -pvc main.tex
 ```
 
-### Para que no pare de generar si hay un error
+### Avoid stopping if there is an error
 
 ```bash
 latexmk -pvc -interaction=nonstopmode main.tex
 ```
+
