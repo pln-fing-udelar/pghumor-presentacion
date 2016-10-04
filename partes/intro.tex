@@ -1,4 +1,4 @@
-\section{Introducción} 
+\section{Introducción}
 
 \subsection{Motivación}
 
@@ -20,10 +20,10 @@
     Es una pieza fundamental en nuestra interacción con la computadora. Puede generar interfaces más amigables y más adaptadas.}
 
     \framebreak
-    
+
     \begin{itemize}
         \item El humor ha sido estudiado desde el punto de vista psicológico, cognitivo y lingüístico.
-        
+
         \item ¿Pero desde el punto de vista computaciónal?
 
         \item Paso intermedio para la generación.
@@ -38,7 +38,7 @@
 
 \begin{frame}
     \frametitle{Dificultad}
-    
+
     --- ¿Tenés WiFi? \\
     --- Claro. \\
     --- ¿Cuál es la clave? \\
@@ -64,35 +64,31 @@
 
 En el presente trabajo nos concentramos en el humor que pueda ser completamente expresado de forma escrita.}
 
-\subsection{Tipo de textos}
-
-\begin{frame}
-    \frametitle{Tipo de textos}
-
-    \begin{itemize}
-        \item En un texto largo hay que determinar el alcance
-        \item[$\Rightarrow$] Los \emph{tweets} son cortos y fácilmente conseguidos
-
-        \begin{itemize}
-            \item Usualmente con errores gramaticales
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\note{Un punto a tener en cuenta es qué tipos de textos vamos a tratar. Podríamos por ejemplo tratar un artículo, sin embargo podría ocurrir que hay humor en una parte sí, en otra no, sigue un pedazo con humor distinto, etc. Esto quiere decir que nos metemos con la tarea de determinar el \textbf{alcance} del humor, duplicando la complejidad. Para no meternos con este contratiempo decidimos tratar textos de tamaño corto y decidimos tratar \textbf{tweets}. Ellos son publicaciones de la red social Twitter que la gente hace al rededor del mundo. Cumplen que además son fácilmente conseguidos. Por otro lado, como su uso es en su mayoría informal, en general contienen errores gramaticales, dificultando el uso de herramientas con ellos.}
-
 \subsection{Objetivos}
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
     \frametitle{Objetivos}
 
     \begin{itemize}
-        \item Construir un clasificador de humor en tweets en español utilizando métodos de aprendizaje automático
+        \item El objetivo es construir un clasificador de humor en tweets en español utilizando métodos de aprendizaje automático
 
         \begin{itemize}
             \item Se precisa un corpus de tweets en español
         \end{itemize}
     \end{itemize}
+
+    \framebreak{}
+
+    \begin{center}
+      Esta es una tarea dentro del área PLN, entre otras como:
+
+      \begin{itemize}
+        \item Traducir textos
+        \item Determinar si una opinión es positiva o negativa
+        \item Resumir un texto
+        \item Predecir la categoría gramatical de una palabra en un texto
+      \end{itemize}
+    \end{center}
 \end{frame}
 
 \note{Concretando, el objetivo de este trabajo es construir un clasificador de humor en tweets en idioma español utilizando métodos de aprendizaje automático, área que luego vamos a detallar. Para esto es necesario primero contar con un corpus, un conjunto de textos, de tweets en español marcados como humorísticos o como no humorísticos.}
