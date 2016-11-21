@@ -7,7 +7,7 @@
     \frametitle{Metodología}
 
     \begin{itemize}
-        \item Se utilizan SVM, kNN, DT, GNB y MNB.
+        \item Se utilizan SVM, kNN, DT, GNB y MNB\@.
         \item Se divide en 80\% entrenamiento y 20\% evaluación.
         \item Se usa validación cruzada sobre el conjunto de entrenamiento para resultados intermedios durante el desarollo y el conjunto de evaluación para el resultado final.
     \end{itemize}
@@ -29,11 +29,11 @@ Dividimos el corpus en 80\% entrenamiento y 20\% evaluación. El corpus de evalu
 
     \begin{center}
         \scriptsize
-        \begin{tabular}{ c | r | r | r | r | r | r | r }
-            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-            \hline
+        \begin{tabular}{ c r r r r r r r }
+            & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \midrule
             LB1 & \textbf{65,2} & \textbf{82,7} & \textbf{72,9} & \textbf{96,3} & 91,2 & \textbf{93,7} & \textbf{89,7} \\
-            \hline
+            \midrule
             LB2 & N/A & 0,0 & N/A & 82,5 & \textbf{100,0} & 90,4 & 82,5 \\
         \end{tabular}
     \end{center}
@@ -174,7 +174,7 @@ El segundo es un clasificador mucho más simple. Se limita a predecir en base a 
 \end{frame}
 
 \note{
-    Luego sigue OOV. Son cuatro características que cuentan la cantidad de palabras fuera del vocabulario en relación al largo del tweet.
+    Luego sigue OOV\@. Son cuatro características que cuentan la cantidad de palabras fuera del vocabulario en relación al largo del tweet.
 
     Las distintas combinaciones de diccionarios es debido a ventajas y desventajas de cada uno. \textbf{Freeling} es una herramienta que posee el diccionario más barato de usar que tenemos, porque es offline. Tiene un español más clásico, pero no tiene palabras ``nuevas''. \textbf{Wiktionary} tiene un término medio de todo. Es online, pero no limita su uso, y además tiene algunas palabras modernas. Con \textbf{Google} se pueden obtener muchas palabras ``nuevas'' (como iPhone) y también detección de errores ortográficos, pero limita su uso.
 }
@@ -234,7 +234,7 @@ El segundo es un clasificador mucho más simple. Se limita a predecir en base a 
             \item Adivinanzas
             \item Animales
             \item Atlantes
-            \item Otros...
+            \item Otros\ldots
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -313,63 +313,38 @@ Luego nos fijamos la cantidad de palabras de los tweets que pertenecen a este di
 
     Luego se utiliza la Eliminación recursiva de atributos para seleccionar finalmente las características. La técnica procede a quitar las características más irrelevantes una a una y fijarse con qué número se obtiene mejor acierto.}
 
-    \framebreak
+    \framebreak{}
 
     ExtraTrees:
 
     \begin{center}
         \tiny
-        \begin{tabular}{ c | r }
-            \multicolumn{1}{c |}{\textbf{Característica}} & \multicolumn{1}{c}{\textbf{Valor}} \\
-            \hline
+        \begin{tabular}{ c r }
+            \multicolumn{1}{c}{\textbf{Característica}} & \multicolumn{1}{c}{\textbf{Valor}} \\
             CLASE & 74,05 \\
-            \hline
             Diálogo & 10,86 \\
-            \hline
-            Distancia temática: Otros... & 03,07 \\
-            \hline
+            Distancia temática: Otros\ldots & 03,07 \\
             Distancia temática: Atlantes & 02,65 \\
-            \hline
             Distancia temática: Chistes cortos & 02,53 \\
-            \hline
             Preguntas-respuestas & 01,98 \\
-            \hline
             Distancia temática: Adivinanzas & 0,95 \\
-            \hline
             Distancia temática: Animales & 0,87 \\
-            \hline
             Palabras clave & 0,57 \\
-            \hline
             Exclamación & 0,57 \\
-            \hline
             Hashtags & 0,55 \\
-            \hline
             Links & 0,54 \\
-            \hline
             Primera persona & 0,21 \\
-            \hline
             Segunda persona & 0,15 \\
-            \hline
             OOV Freeling & 0,08 \\
-            \hline
             Palabras mayúsculas & 0,06 \\
-            \hline
             ALEATORIA & 0,06 \\
-            \hline
             Jerga sexual & 0,06 \\
-            \hline
             Negación & 0,05 \\
-            \hline
             OOV Wiktionary & 0,04 \\
-            \hline
             OOV Freeling Wiktionary & 0,03 \\
-            \hline
             Presencia de animales & 0,03 \\
-            \hline
             OOV Freeling Google & 0,03 \\
-            \hline
             Antónimos & 0,02 \\
-            \hline
             Palabras no españolas & 0,00 \\
         \end{tabular}
     \end{center}
@@ -378,7 +353,7 @@ Luego nos fijamos la cantidad de palabras de los tweets que pertenecen a este di
 
     Observar que por ejemplo Diálogo, Preguntas-respuestas y las de Distancia temática son las características que más discriminan al humor. Ver por otro lado que características como las de OOV, Antónimos y Jerga sexual resultan ser peores que el azar.}
 
-    \framebreak
+    \framebreak{}
 
     Eliminación recursiva de atributos:
 
@@ -403,22 +378,22 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
     \begin{center}
         \scriptsize
-        \begin{tabular}{ c | r | r | r | r | r | r | r }
-            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-            \hline
+        \begin{tabular}{ c r r r r r r r }
+            & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \midrule
             LB1 & \textbf{61,7} & \textbf{84,6} & \textbf{71,4} & \textbf{96,6} & 89,2 & 71,4 & \textbf{88,5} \\
-            \hline
+            \midrule
             LB2 & N/A & 0,0 & N/A & 83,0 & \textbf{100,0} & \textbf{90,7} & 83,0 \\
-            \hline
-            \hline
+            \midrule
+            \midrule
             SVM & 83,6 & 68,9 & \textbf{75,5} & 93,8 & 97,2 & \textbf{95,5} & \textbf{92,5} \\
-            \hline
+            \midrule
             DT & 66,5 & 67,5 & 67,0 & 93,3 & 93,0 & 93,2 & 88,9 \\
-            \hline
+            \midrule
             GNB & 57,5 & \textbf{78,2} & 66,3 & \textbf{95,2} & 88,2 & 91,5 & 86,5 \\
-            \hline
+            \midrule
             MNB & \textbf{84,8} & 60,0 & 70,3 & 92,3 & \textbf{97,8} & 95,0 & 91,4 \\
-            \hline
+            \midrule
             KNN & 81,3 & 66,3 & 73,0 & 93,4 & 96,9 & 95,1 & 91,7 \\
         \end{tabular}
 
@@ -426,11 +401,11 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
             Mejor técnica: \textbf{SVM}
         \end{center}
 
-        \begin{tabular}{ c | r | r }
+        \begin{tabular}{ c r r }
             \textbf{son/clasif.} & Positivos & Negativos \\
-            \hline
+            \midrule
             Positivos & 842 & 381 \\
-            \hline
+            \midrule
             Negativos & 165 & 5805 \\
         \end{tabular}
     \end{center}
@@ -448,17 +423,17 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
     \begin{center}
         \scriptsize
-        \begin{tabular}{ c | r | r | r | r | r | r | r }
-            & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-            \hline
+        \begin{tabular}{ c r r r r r r r }
+            & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \midrule
             SVM & 87,5 & 69,6 & 77,5 & 94,2 & 98,0 & 96,1 & 93,3 \\
-            \hline
+            \midrule
             DT & \textbf{100,0} & \textbf{98,8} & \textbf{99,4} & \textbf{99,8} & \textbf{100,0} & \textbf{99,9} & \textbf{99,8} \\
-            \hline
+            \midrule
             GNB & 58,1 & 77,7 & 66,4 & 95,2 & 88,8 & 91,9 & 86,9 \\
-            \hline
+            \midrule
             MNB & 84,6 & 58,9 & 69,5 & 92,3 & 97,9 & 95,0 & 91,7 \\
-            \hline
+            \midrule
             KNN & 87,0 & 71,5 & 78,5 & 94,5 & 97,9 & 96,2 & 93,5 \\
         \end{tabular}
     \end{center}
@@ -495,7 +470,7 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
         69\% jugar con lo que vas encontrando.
     \end{example}
 
-    \framebreak
+    \framebreak{}
 
     \begin{itemize}
         \item Luego se buscan aquellos con mismos valores de atributos pero distinta clase: 30 pares encontrados.
@@ -519,11 +494,11 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
         \begin{center}
             \scriptsize
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-                \hline
+            \begin{tabular}{ c r r r r r r r }
+                \textbf{SVM} & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+                \midrule
                 Antes & 87,5 & 69,6 & 77,5 & 94,2 & 98,0 & 96,1 & 93,3 \\
-                \hline
+                \midrule
                 Después & \textbf{89,0} & \textbf{71,3} & \textbf{79,1} & \textbf{94,7} & \textbf{98,3} & \textbf{96,5} & \textbf{94,0} \\
             \end{tabular}
         \end{center}
@@ -534,11 +509,11 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
         \begin{center}
             \scriptsize
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-                \hline
+            \begin{tabular}{ c r r r r r r r }
+                \textbf{SVM} & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+                \midrule
                 Antes & 83,6 & 68,9 & 75,5 & 93,8 & 97,2 & 95,5 & 92,5 \\
-                \hline
+                \midrule
                 Después & \textbf{85,7} & \textbf{69,2} & \textbf{76,6} & \textbf{94,2} & \textbf{97,8} & \textbf{95,9} & \textbf{93,1} \\
             \end{tabular}
         \end{center}
@@ -555,11 +530,11 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
         \item Hay una pequeña mejora:
         \begin{center}
             \scriptsize
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-                \hline
+            \begin{tabular}{ c r r r r r r r }
+                \textbf{SVM} & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+                \midrule
                 Antes & 83,6 & 68,9 & 75,5 & \textbf{93,8} & \textbf{97,2} & \textbf{95,5} & \textbf{92,5} \\
-                \hline
+                \midrule
                 Después & \textbf{84,0} & \textbf{69,6} & \textbf{76,1} & 93,7 & \textbf{97,2} & 95,4 & 92,3 \\
             \end{tabular}
         \end{center}
@@ -577,17 +552,17 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
         \begin{center}
             \scriptsize
-            \begin{tabular}{ c | r | r | r | r | r | r | r }
-                & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-                \hline
+            \begin{tabular}{ c r r r r r r r }
+                & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+                \midrule
                 SVM & \textbf{81,9} & 73,8 & 77,6 & 78,5 & \textbf{85,4} & \textbf{81,8} & \textbf{79,9} \\
-                \hline
+                \midrule
                 DT & 74,5 & 75,5 & 75,0 & 72,2 & 71,1 & 71,7 & 74,1 \\
-                \hline
+                \midrule
                 GNB & 78,7 & 78,6 & \textbf{78,6} & 76,1 & 76,3 & 76,2 & 77,5 \\
-                \hline
+                \midrule
                 MNB & 68,5 & \textbf{85,5} & 76,1 & \textbf{83,3} & 64,6 & 72,9 & 74,6 \\
-                \hline
+                \midrule
                 KNN & 79,2 & 73,0 & 76,0 & 77,4 & 82,9 & 80,1 & 78,1 \\
             \end{tabular}
         \end{center}
@@ -600,13 +575,13 @@ A continuación mi compañero Matías va a proceder a mostrar los resultados obt
 
     \begin{center}
         \scriptsize
-        \begin{tabular}{ c | r | r | r | r | r | r | r }
-            \textbf{SVM} & \multicolumn{1}{c |}{Precisión} & \multicolumn{1}{c |}{Recall} & \multicolumn{1}{c |}{$F_1$} & \multicolumn{1}{c |}{Prec. neg.} & \multicolumn{1}{c |}{Rec. neg.} & \multicolumn{1}{c |}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
-            \hline
+        \begin{tabular}{ c r r r r r r r }
+            \textbf{SVM} & \multicolumn{1}{c}{Precisión} & \multicolumn{1}{c}{Recall} & \multicolumn{1}{c}{$F_1$} & \multicolumn{1}{c}{Prec.\ neg.} & \multicolumn{1}{c}{Rec.\ neg.} & \multicolumn{1}{c}{$F_1$ neg.} & \multicolumn{1}{c}{Acierto} \\
+            \midrule
             Noticias & \textbf{97,0} & \textbf{95,2} & \textbf{96,1} & \textbf{97,0} & \textbf{98,1} & \textbf{97,5} & \textbf{97,0} \\
-            \hline
+            \midrule
             Reflexiones & 95,0 & 83,0 & 88,6 & 84,0 & 95,3 & 89,3 & 88,9 \\
-            \hline
+            \midrule
             Curiosidades & 94,6 & 83,7 & 88,9 & 88,2 & 96,3 & 92,1 & 90,7 \\
         \end{tabular}
     \end{center}
