@@ -1,16 +1,16 @@
-\section{Introducción} 
+\section{Introduction}
 
-\subsection{Motivación}
+\subsection{Motivation}
 
 \begin{frame}[allowframebreaks]
-    \frametitle{Motivación}
+    \frametitle{Motivation}
 
     \begin{itemize}
-        \item La risa caracteriza al ser humano como especie.
+        \item Laughter characterizes the human being as a specie.
 
-        \item Componente esencial en la comunicación humana.
+        \item It's an essential component in human communication.
 
-        \item Humor como pieza fundamental en la interacción persona-computadora.
+        \item Humor as a fundamental part of human-computer interaction.
     \end{itemize}
 
     \note{La risa caracteriza al ser humano como especia, y el humor potencialmente la origina.
@@ -19,14 +19,12 @@
 
     Es una pieza fundamental en nuestra interacción con la computadora. Puede generar interfaces más amigables y más adaptadas.}
 
-    \framebreak
-    
-    \begin{itemize}
-        \item El humor ha sido estudiado desde el punto de vista psicológico, cognitivo y lingüístico.
-        
-        \item ¿Pero desde el punto de vista computaciónal?
+    \framebreak{}
 
-        \item Paso intermedio para la generación.
+    \begin{itemize}
+        \item Humor has been historically studied from a psychological, cognitive and linguistic viewpoint. But what about from a computational point of view?
+
+        \item Also, this is an intermediate step for achieving generation.
     \end{itemize}
 
     \note{El humor ha sido ampliamente estudiado desde el punto de vista psicológico, sociológico, cognitivo y lingüístico, ¿pero desde el punto de vista computacional? Trabajos previos existen, pero son pocos y con una versión reducida del problema.
@@ -34,15 +32,15 @@
     Adicionalmente nos motiva que este trabajo puede ser utilizado como paso intermedio en la generación de humor o generación de chistes. Es decir, usar el reconocimiento para luego intentar generarlo.}
 \end{frame}
 
-\subsection{Dificultad}
+\subsection{Difficulty}
 
 \begin{frame}
-    \frametitle{Dificultad}
-    
-    --- ¿Tenés WiFi? \\
-    --- Claro. \\
-    --- ¿Cuál es la clave? \\
-    --- Tener dinero y pagarlo. \\
+    \frametitle{Difficulty}
+
+    --- Do you have WiFi? \\
+    --- Sure. \\
+    --- What's the key? \\
+    --- To have money and pay it. \\
 \end{frame}
 
 \note{Para mostrar la dificultad del problema se trae al frente el siguiente ejemplo. Para que una computadora logre interpretar este texto es necesario que conozca cada uno de los conceptos incluidos, debe tener conocimiento y contexto sobre el mundo. Debe saber por ejemplo qué es WiFi, que lleva contraseña, que contraseña es lo mismo que clave (que son sinónimos). Que la persona pregunta por la contraseña, y que la otra persona responde cómo conseguir WiFi en lugar de la respuesta a la pregunta original. Que por lo tanto la segunda pregunta es ambigua. En definitiva darse cuenta que esto no es serio: una respuesta correcta a preguntar por una contraseña no es tener direno y pagarlo.}
@@ -55,8 +53,8 @@
     \frametitle{Humor}
 
     \begin{itemize}
-        \item ¿Qué es el humor?
-        \item No es algo objetivo ni fácil de definir
+        \item What is Humor?
+        \item Neither it's something objective nor easy to explain.
     \end{itemize}
 \end{frame}
 
@@ -64,33 +62,33 @@
 
 En el presente trabajo nos concentramos en el humor que pueda ser completamente expresado de forma escrita.}
 
-\subsection{Tipo de textos}
+\subsection{Type of texts}
 
 \begin{frame}
-    \frametitle{Tipo de textos}
+    \frametitle{Type of texts}
 
     \begin{itemize}
-        \item En un texto largo hay que determinar el alcance
-        \item[$\Rightarrow$] Los \emph{tweets} son cortos y fácilmente conseguidos
+        \item In a long text we would need to identify the scope
+        \item[$\Rightarrow$] \emph{Tweets} are short, self-contained and easy to obtain
 
         \begin{itemize}
-            \item Usualmente con errores gramaticales
+            \item Albeit usually they have grammar mistakes and typos
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \note{Un punto a tener en cuenta es qué tipos de textos vamos a tratar. Podríamos por ejemplo tratar un artículo, sin embargo podría ocurrir que hay humor en una parte sí, en otra no, sigue un pedazo con humor distinto, etc. Esto quiere decir que nos metemos con la tarea de determinar el \textbf{alcance} del humor, duplicando la complejidad. Para no meternos con este contratiempo decidimos tratar textos de tamaño corto y decidimos tratar \textbf{tweets}. Ellos son publicaciones de la red social Twitter que la gente hace al rededor del mundo. Cumplen que además son fácilmente conseguidos. Por otro lado, como su uso es en su mayoría informal, en general contienen errores gramaticales, dificultando el uso de herramientas con ellos.}
 
-\subsection{Objetivos}
+\subsection{Objectives}
 
 \begin{frame}
-    \frametitle{Objetivos}
+    \frametitle{Objectives}
 
     \begin{itemize}
-        \item Construir un clasificador de humor en tweets en español utilizando métodos de aprendizaje automático
+        \item Build a humor classifier for Spanish tweets based on supervised machine learning techniques
 
         \begin{itemize}
-            \item Se precisa un corpus de tweets en español
+            \item We first need a Spanish tweets corpus to work with
         \end{itemize}
     \end{itemize}
 \end{frame}

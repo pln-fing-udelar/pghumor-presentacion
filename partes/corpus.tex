@@ -1,32 +1,32 @@
-\section{Construcción del corpus}
+\section{Corpus Construction}
 
-\subsection{Extracción}
+\subsection{Extraction}
 \begin{frame}
-    \frametitle{Extracción}
+    \frametitle{Extraction}
 
     \begin{itemize}
-        \item Humorístico: se busca en Twitter por la palabra clave \emph{chistes} y se eligen cuentas, llegando a 16.488 tweets.
-        \item No humorístico: cuentas de noticias, frases filosóficas y curiosidades, alcanzando los 22.875 tweets.
+        \item Humorous: we looked in Twitter for the keyword \emph{chistes} and choose accounts, reaching 16,488 tweets.
+        \item Non humorous: news, philosophical phrases y curiosities facts accounts, summing 22,875 tweets.
     \end{itemize}
 \end{frame}
 
-\subsection{Anotación}
+\subsection{Annotation}
 \begin{frame}
-    \frametitle{Anotación}
+    \frametitle{Annotation}
 
     \begin{itemize}
-        \item Naturalmente se etiquetarían los tweets según su tipo de cuenta; pero se encuentran muchas inconsistencias.
+        \item Naturally we should tag the tweets according to the type of account, but there are lots of inconsistencies.
 
         \begin{itemize}
-            \item Ejemplo: \emph{RT @MichelPesquera: El significado de ``Nada'' http://t.co/L1e2uHOhM4}
+            \item Example: \emph{RT @MichelPesquera: El significado de ``Nada'' http://t.co/L1e2uHOhM4}
 
-            \item Hay que anotarlos a mano.
+            \item They have to be cured by hand.
         \end{itemize}
 
-        \item Excesiva cantidad de tweets para anotar.
+        \item But it's an excesive amount of tweets to classify.
 
         \begin{itemize}
-            \item Se crea una aplicación para que usuarios los anoten.
+            \item So we created an app to allow anyone to anotate.
         \end{itemize}
     \end{itemize}
 
@@ -34,13 +34,13 @@
 
     \begin{center}
         \bf
-        Los usuarios definen al humor.
+        Humor is crowd-defined.
     \end{center}
 \end{frame}
 
 \begin{frame}
-\frametitle{Anotación}
-\framesubtitle{Cantidad de clases a considerar}
+\frametitle{Annotation}
+\framesubtitle{Classes to consider}
         \begin{center}
         \begin{columns}[c]
             \begin{column}[c]{0.50\textwidth}
@@ -56,35 +56,35 @@
     \end{center}
 \end{frame}
 \begin{frame}
-    \frametitle{Anotación}
-    \framesubtitle{Otras consideraciones}
+    \frametitle{Annotation}
+    \framesubtitle{Other considerations}
 
     \begin{itemize}
-        \item Contenido explícito
+        \item Explicit content
 
         \begin{itemize}
-            \item Se busca la mayor cantidad de votantes
-            \item Se elimina contenido explícito
+            \item We are looking for the largest number of annotators.
+            \item So explicit content is removed.
         \end{itemize}
 
-        \item Eficiencia
+        \item Performance
 
         \begin{itemize}
-            \item En el servidor
-            \item En tiempo entre tweets
+            \item Low-latency
+            \item Time between tweets
         \end{itemize}
 
-        \item Algoritmo de selección
+        \item Selection algorithm
 
         \begin{itemize}
-            \item Aleatorio
-            \item Sin repetir
+            \item Random
+            \item Without repetition
         \end{itemize}
     \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Anotación}
-\framesubtitle{Aplicación Final}
+\frametitle{Annotation}
+\framesubtitle{Final app}
     \begin{center}
         \begin{columns}[c]
             \begin{column}[c]{0.45\textwidth}
@@ -100,18 +100,18 @@
     \end{center}
 \end{frame}
 
-\subsubsection{Resultado de la anotación}
+\subsubsection{Annotation results}
 \begin{frame}[allowframebreaks]
-    \frametitle{Resultado de la anotación}
+    \frametitle{Annotation results}
 
     \begin{itemize}
-        \item[+] 60k votaciones recibidas
-        \item[--] 20k votaciones eliminadas
-        \item[--] 6,5k votaciones “ver otro” (\emph{“skip”})
-        \item[=] 33,5k votos considerados
+        \item[+] 60k votes
+        \item[--] 20k removed votes
+        \item[--] 6,5k ``skip'' votes
+        \item[=] 33,5k considered votes
     \end{itemize}
 
-    \framebreak
+    \framebreak{}
 
     \begin{center}
         \includegraphics{votos_por_calificacion_torta.png}
@@ -120,12 +120,12 @@
     \end{center}
 \end{frame}
 
-\subsubsection{Humor según la votación}
+\subsubsection{Humor among voters}
 
 \begin{frame}[allowframebreaks]
-    \frametitle{Humor según la votación}
+    \frametitle{Humor among voters}
 
-    Porcentaje de votos positivos: $\frac{\#\{votos\ positivos\}}{\#\{total\ votos\}}$
+    Rate of positive votes: $\frac{\#\{positive\ votes\}}{\#\{total\}}$ % chktex 21
 
     \begin{center}
         \includegraphics[height=3.75cm]{histograma_porcentaje_humor.png}
@@ -133,41 +133,41 @@
 
     \begin{itemize}
         \item $[60\%, 100\%] \Rightarrow$ \textbf{Humor}
-        \item $(30\%, 60\%) \Rightarrow$ \textbf{Dudoso}
-        \item $[0\%, 30\%] \Rightarrow$ \textbf{No humor}
+        \item $(30\%, 60\%) \Rightarrow$ \textbf{Doubtful}
+        \item $[0\%, 30\%] \Rightarrow$ \textbf{Non humorous}
     \end{itemize}
 
-    \framebreak
+    \framebreak{}
 
     \begin{center}
         \includegraphics[height=6.5cm]{grupos.png}
     \end{center}
 \end{frame}
 
-\subsubsection{Concordancia entre los anotadores}
+\subsubsection{Agreement between annotators}
 
 \begin{frame}[allowframebreaks]
-    \frametitle{Concordancia entre los anotadores}
+    \frametitle{Agreement between annotators}
 
     \begin{itemize}
-        \item Se quiere saber qué tan de acuerdo estuvieron las personas a la hora de votar.
-        \item Se utiliza la medida kappa de Fleiss.
-        \item kappa evalúa cuán mejor es la votación respecto a una al azar, siendo lo mejor posible 1 y siendo 0 una votación al azar.
+        \item We wanted to know what was the agreement between people.
+        \item Fleiss' kappa was used.
+        \item It measures the votes against a random one, being 1 the best possible and 0 being equal to random.
     \end{itemize}
 
     \note{Interesa saber cuál fue la concordancia entre los anotadores, es decir, qué tan de acuerdo estuvo la gente a la hora de anotar como humor (1, 2, 3, 4 o 5 estrellas) o como humorístico a los tweets. Se propone utilizar la medida kappa. Esta medida se fija la cantidad de pares de anotadores que están de acuerdo en cada categoría para cada tweet. El resultado es un número, en donde 0 significa una anotación hecha al azar y 1 es el mejor acuerdo posible.}
 
-    \framebreak
+    \framebreak{}
 
     \begin{itemize}
-        \item 0,416 para los tweets con 2 votos, que son 4.011.
+        \item 0.416 for tweets with 2 votes, that are 4,011.
 
-        \item 0,325 para los tweets con 6 votos, que son 278.
+        \item 0.325 for tweets with 6 votes, that are 278.
 
-        \item Acuerdo de nivel medio.
+        \item Mid level agreement.
 
         \begin{itemize}
-            \item No hay unanimidad claramente
+            \item There's clearly no unanimity.
         \end{itemize}
     \end{itemize}
 \end{frame}

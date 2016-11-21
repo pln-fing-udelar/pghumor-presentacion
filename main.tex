@@ -1,15 +1,9 @@
-\PassOptionsToPackage{spanish}{translator}
+\PassOptionsToPackage{english}{translator}
 \documentclass{beamer} %[handout, notes=only]
 
 \usepackage{etex} % Porque sino al usar muchos paquetes da error.
 
-\usepackage[spanish, es-tabla]{babel}
-
-%\uselanguage{spanish}
-%\languagepath{spanish}
-
-%\deftranslation[to=spanish]{Example}{Ejemplo}
-%\deftranslation[to=spanish]{example}{ejemplo}
+\usepackage[english]{babel}
 
 \mode<presentation> {
 \usetheme{Madrid}
@@ -37,7 +31,7 @@
 
 \AtBeginSection{
     \begin{frame}
-        \frametitle{Índice de contenido}
+        \frametitle{Agenda}
 
         \begin{multicols}{2}
             \tableofcontents[currentsection, hideallsubsections]
@@ -45,13 +39,13 @@
     \end{frame}
 }
 
-\title[Detección de humor]{Detección de humor en textos en español}
+\title[Is This a Joke?]{Is This a Joke? Humor Detection in Spanish Tweets}
 
-\author{Santiago \textsc{Castro} --- Matías \textsc{Cubero}}
+\author[Castro, Cubero, Garat and Moncecchi]{Santiago \textsc{Castro}, Matías \textsc{Cubero}, Diego \textsc{Garat} and Guillermo \textsc{Moncecchi}}
 \institute[]{
-    Facultad de Ingeniería, Universidad de la República
+    NLP Group, University of the Republic, Uruguay
 }
-\date{\today}
+\date{November 24, 2016}
 
 \usepackage{pgfpages}
 
@@ -68,7 +62,7 @@
 \note{Bienvenidos a la presentación de nuestro proyecto de grado. Mi nombre es Santiago y él es Matías. El tema a tratar es Detección de humor en textos en español, es decir, lo que se hace en este trabajo es reconocer humor en textos en idioma español.}
 
 \begin{frame}
-    \frametitle{Índice de contenido}
+    \frametitle{Agenda}
 
     \begin{multicols}{2}
         \tableofcontents[hideallsubsections]
@@ -80,7 +74,6 @@
 \input{partes/intro}
 \input{partes/estado_del_arte}
 \input{partes/corpus}
-\input{partes/aprendizaje_automatico}
 \input{partes/clasificador}
 \input{partes/conclusiones}
 
@@ -93,7 +86,7 @@
 \end{frame}
 
 \begin{frame}
-    \Huge{\centerline{¿Preguntas?}}
+    \Huge{\centerline{Questions?}}
 \end{frame}
 
 \end{document}

@@ -1,40 +1,40 @@
-\section{Estado del arte}
+\section{State of the Art}
 
-\subsection{Definiciones}
+\subsection{Definitions}
 \begin{frame}[allowframebreaks]
-    \frametitle{Definiciones}
+    \frametitle{Definitions}
 
     \begin{block}{Humor}
-        Modo de presentar, enjuiciar o comentar la realidad, resaltando el lado cómico, risueño o ridículo de las cosas.  
+        A way to present, prosecute or comment the reality, highlighting the comic or ridiculous side.
     \end{block}
 
     \begin{block}{Chiste}
-        Dicho u ocurrencia graciosa.
+        Funny saying or witticism.
     \end{block}
 
     \note{Primero, según el Diccionario la Real Academia Española, el humor es una manera de presentar la realidad, resaltando el lado cómico de las cosas. Recordemos que estre trabajo se trata sobre humor complementamente expresable dentro un texto. Es diferente a chiste, que es un dicho cómico, un cuento, aunque en este trabajo lo usamos de manera intercambiada con ``humor''.}
 
-    \framebreak
-        
+    \framebreak{}
+
     \begin{align*}
-        \text{humor} \iff&  \text{cómico} \\
-        \text{ironía} \iff& \text{significar lo contrario} \\
-        \text{sátira} \iff& \text{crítica + humor} \\
-        \text{sarcasmo} \iff& \text{burla} \\
-        \text{ingenio}  \iff& \text{perspicacia en el humor}
+        \text{humor} \iff&  \text{comic} \\
+        \text{irony} \iff& \text{opposition} \\
+        \text{satire} \iff& \text{criticism + humor} \\
+        \text{sarcasm} \iff& \text{derision} \\
+        \text{ingenio}  \iff& \text{insight in humor}
     \end{align*}
 
     \note{Queremos diferenciarlo de otros conceptos similares, como ironía, que es significar lo contrario. Sátira, que es una crítica humorística generalmente en prosa. Sarcasmo, que es una forma de burla mordaz. Ingenio, que es darse cuenta de ciertos patrones. Nosotros queremos concentrarnos en lo que es la comicidad.}
 \end{frame}
 
-\subsection{Teorías}
+\subsection{Theories}
 \begin{frame}
-    \frametitle{Teoría de la superioridad}
+    \frametitle{Superiority Theory}
 
-    \textbf{Superioridad}: siempre nos reímos de alguien (risa = ganar)
+    \textbf{Superiority}: we always laugh at someone (lautgher = winning)
     \begin{example}
-        --- ¿En qué se parece Superman a un político honesto? \\
-        --- En que ninguno de los dos existe.
+        --- How does Superman look like a honest politician? \\
+        --- In which neither of the two exists.
     \end{example}
 \end{frame}
 
@@ -43,15 +43,15 @@
 En el ejemplo nos estaríamos ríendo de los políticos, al afirmar que no son honestos.}
 
 \begin{frame}
-    \frametitle{Teoría del alivio}
+    \frametitle{Relief Theory}
 
-    \textbf{Aliviarse}: de temas que generan tensión, como el sexo, la muerte, etc.
+    To free yourself from subjects that generate tension, such as sex, death, etc.
 
     \begin{example}
-        --- Bienvenida a McDonald’s, ¿qué le doy? \\
-        --- ¡Vergüenza! \\
-        --- ¡Mamá! ¡Estoy trabajando! \\
-        --- Uy, perdóneme ``señor licenciado en diseño gráfico'' \\
+        --- Welcome to McDonald’s, what do I give you? \\
+        --- Shame! \\
+        --- Mom! I'm working! \\
+        --- Oops, excuse me ``mister licensed in graphic design'' \\
     \end{example}
 \end{frame}
 
@@ -60,12 +60,12 @@ En el ejemplo nos estaríamos ríendo de los políticos, al afirmar que no son h
 Se muestra un ejemplo que ilustra este punto de vista.}
 
 \begin{frame}
-    \frametitle{Teoría de la resolución de incongruencias}
+    \frametitle{Incongruity Resolution Theory}
 
-    \textbf{Resolución de incongruencia}: percepción repentina de conflicto cognitivo, encontrando luego un sentido
+    \textbf{Incongruity Resolution}: sudden perception of cognitive conflict, then finding the meaning
     \begin{example}
-        --- Mi amor llevamos 30 años juntos, ¿por qué no nos casamos? \\
-        --- Mejor no, ¿quién se va a querer casar con nosotros?
+        --- Honey, we have been married for 30 years, we don't we get married? \\
+        --- Better not, who will want to marry us?
     \end{example}
 \end{frame}
 
@@ -74,12 +74,12 @@ Se muestra un ejemplo que ilustra este punto de vista.}
 El ejemplo dice ``¿por qué no nos casamos?'' y ``¿quién se va a querer casar con nosotros?''. La ambigüedad hace ver una inconsistencia que luego podemos encontrarle un sentido. }
 
 \begin{frame}
-    \frametitle{Teoría de los guiones semánticos del humor}
+    \frametitle{Semantic Script Theory of Humor}
 
-    Oposición de guiones semánticos
+    Semantic scripts opposition.
 
     \begin{example}
-        Él rompió su corazón. Ella rompió su PlayStation 4. Creo que todos sabemos quién lloró más fuerte.
+        He broke her heart. She broke his iPhone. I think we all know who cried louder.
     \end{example}
 \end{frame}
 
@@ -90,143 +90,132 @@ En el ejemplo se habla de romper, de terminar un amor y a la vez de romper un di
 A continuación Matías va a mostrar los enfoques computacionales.
 }
 
-\subsection{Enfoques computacionales}
+\subsection{Computational Approaches}
 \begin{frame}
-    \frametitle{Enfoques computacionales}
+    \frametitle{Computational Approaches}
+
+    Mainly based on feature engineering:
 
     \begin{itemize}
-        \item Basados en características
-
-        \item Característica: propiedad medible de un texto
-
-        \item Existen trabajos anteriores que estudian diferentes características.
-    \end{itemize}
-\end{frame}
-
-\subsubsection{Características}
-
-\begin{frame}
-    \frametitle{Características}
-
-    \begin{itemize}
-        \item Aliteración
-        \item Ambigüedad
-        \item Antonimia
-        \item Centrado en personas
-        \item Jerga sexual
-        \item Negatividad
-        \item Palabras clave
-        \item Perplejidad --- OOV
+        \item Alliteration
+        \item Ambiguity
+        \item Antonymy
+        \item Focused on people
+        \item Sexual slang
+        \item Negativity
+        \item Keywords
+        \item Perplexity --- OOV
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Aliteración}
+    \frametitle{Alliteration}
 
-    Repetición notoria de fonemas
+    Noticeable repetition of phonemes:
 
     \begin{example}
-        Cuando pasé por tu puerta me tiraste una flor, la próxima vez que pase, ¡sin maceta por favor!
+        Of all the things I lost, I miss my mind the most
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Ambigüedad}
-    
-    De las palabras y de la oración
+    \frametitle{Ambiguity}
+
+    Of the words and of the sentences
 
     \begin{example}
-        La perra de mi vecina me ladró.
+        --- I saw a man-eating shark at the aquarium. \\
+        --- That’s nothing. I saw a man eating herring at the deli.
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Antonimia}
-    
-    Relación de oposición entre los significados de dos palabras (útil --- inútil)
+    \frametitle{Antonymy}
+
+    Opposition relationship between the meanings of two words
 
     \begin{example}
-        --- ¿Qué le dice Tarzán a un ratón? \\
-        --- ¡Tan pequeño y con bigote! \\
-        --- ¿Y qué le dice el ratón a Tarzán? \\
-        --- ¡Tan grandote y con pañal! \\
+        --- What does Tarzan tell a mouse? \\
+        --- So small an with a mustache! \\
+        --- An what does the mouse tell Tarzan? \\
+        --- So big and with a diaper! \\
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Centrado en personas}
-    
+    \frametitle{Focused on people}
+
     \begin{itemize}
-        \item Constantemente referenciando a escenarios relacionados con personas.
-        
-        \item Palabras como “tú”, “yo”, etc.
+        \item Constantly referring to events related to people.
+
+        \item Words such as ``you'', ``I'', etc.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Jerga sexual}
-    
-    El humor basado en jerga sexual es altamente popular
+    \frametitle{Sexual slang}
+
+    Humor based on sexual slang is popular.
 
     \begin{example}
-        --- Che, ¿qué significa “let’s fuck”? \\
-        --- Tengamos sexo. \\
-        --- Bueno, pero después me decís qué significa.
+        --- Hey, what's the meaning of ``hagamos el amor''? \\
+        --- Let's make love. \\
+        --- Ok, but then you tell me what it means.
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Negatividad}
-    
-    El humor tiene una tendencia hacia las connotaciones negativas
+    \frametitle{Negativity}
+
+    Humor tends to be framed in negative scenarios.
 
     \begin{example}
-        --- Dr., ¿cómo hago para vivir 100 años? \\
-        --- Nada de sexo, alcohol ni vicios. \\
-        --- ¿Y funciona? \\
-        --- No sé, pero seguro que se le va a hacer largo.
+        --- Dr., how do I do to live 100 years? \\
+        --- No sex, no alcohol, no vices. \\
+        --- And it works? \\
+        --- I don't know, but I'm sure it will be long.
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Palabras clave}
-    
-    Hay palabras que son más mencionadas en textos humorísticos que en textos de no humorísticos, y viceversa.
-    
+    \frametitle{Keywords}
+
+    There are certain words that occur more often in jokes than in other texts.
+
     \begin{example}
-        --- Mamá, ¡en la escuela me dicen Superman! \\
-        --- Ay Jaimito, ¡otra vez te pusiste los calzoncillos encima de los pantalones!
+        --- Mom, at school they call me Superman! \\
+        --- Oh Jhonnie, you put your underpants on top of your pants again!
     \end{example}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Perplejidad --- OOV}
-    
+    \frametitle{Perplexity --- OOV}
+
     \begin{itemize}
-        \item Se construye un modelo del lenguaje a partir de narraciones
+        \item A language model is built based on narrations.
 
         \begin{itemize}
-            \item La perplejidad en textos de humor es mayor
+            \item Perplexity in jokes is higher.
         \end{itemize}
 
-        \item Es más frecuente encontrar palabras fuera del vocabulario (OOV) en textos de humor
+        \item Also, it's more common to find out of vocabulary words in jokes.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Trabajos similares}
+    \frametitle{Similar prior works}
 
     \begin{itemize}
-        \item Existen dos trabajos similares a este proyecto:
+        \item There are two similar works similar to this project:
 
         \begin{itemize}
             \item \emph{Making Computers Laugh: Investigations in Automatic Humor Recognition}, Mihalcea y Strapparava (2005)
             \item \emph{Recognizing Humor Without Recognizing Meaning}, Sjöbergh y Araki (2007)
         \end{itemize}
 
-        \item Textos en inglés y de una sola oración.
+        \item Both in English and with one-liners.
 
-        \item Sacan chistes de Internet. Ejemplo:
+        \item They extracted the jokes from Internet. An example:
 
         \begin{center}
             \emph{Beauty is in the eye of the beer holder.}
@@ -234,27 +223,27 @@ A continuación Matías va a mostrar los enfoques computacionales.
     \end{itemize}
 \end{frame}
 
-\subsubsection{Trabajos anteriores principales}
+\subsubsection{Main prior works}
 
 \begin{frame}
-    \frametitle{Trabajos anteriores principales}
-    
+    \frametitle{Main prior works}
+
     \begin{center}
         \scriptsize
-        \begin{tabular}{>{\centering\arraybackslash}m{1.9cm} | m{4cm} | m{4cm}}
-            & \multicolumn{1}{c |}{Mihalcea y Strapparava (2005)} & \multicolumn{1}{c}{Sjöbergh y Araki (2007)} \\
-            \hline
-            Ejemplos positivos & 16.000 chistes & 6.100 chistes \\
-            \hline
-            Ejemplos negativos & Oraciones del BNC, titulares de noticias y proverbios & 6.000 oraciones distintas del BNC \\
-            \hline
-            Acierto & 96,95\% con titulares de noticias, 79,15\% con oraciones del BNC y 84,82\% con los proverbios & 85,40\% \\
-            \hline
-            Características & Aliteración, Antonimia y Jerga sexual & Aliteración, Ambigüedad, Antonimia, Palabras centradas en las personas y Palabras clave
+        \begin{tabular}{>{\centering\arraybackslash}m{1.9cm} m{4cm} m{4cm}}
+            & \multicolumn{1}{c}{Mihalcea y Strapparava (2005)} & \multicolumn{1}{c}{Sjöbergh y Araki (2007)} \\
+            \midrule
+            Positive samples & 16.000 jokes & 6.100 jokes \\
+            \midrule
+            Negative samples & Sentences from BNC, news headlines and proverbs & 6.000 different sentences from BNC \\
+            \midrule
+            Accuracy & 96,95\% with news headlines, 79,15\% with sentences from BNC y 84,82\% with proverbs & 85,40\% \\
+            \midrule
+            Features & Alliteration, Antonymy and Sexual slang & Alliteration, Ambiguity, Antonymy, Words focused on people and Keywords
         \end{tabular}
 
         \vfill
 
-        Los resultados no son comparables.
+        Results are not comparable.
     \end{center}
 \end{frame}
